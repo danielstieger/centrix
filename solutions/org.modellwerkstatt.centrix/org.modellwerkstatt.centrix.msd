@@ -9,6 +9,7 @@
       <sourceRoot location="vertx-core-3.5.3.jar" />
       <sourceRoot location="vertx-tcp-eventbus-bridge-3.5.3.jar" />
       <sourceRoot location="vertx-web-3.5.3.jar" />
+      <sourceRoot location="log4j.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
@@ -16,6 +17,7 @@
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-core-3.5.3.jar" />
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-tcp-eventbus-bridge-3.5.3.jar" />
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-web-3.5.3.jar" />
+    <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/log4j.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
