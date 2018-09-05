@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:c6cf81b0-283a-4565-9487-03b39e03faee(org.modellwerkstatt.centrix.vertilog)">
+<model ref="r:c6cf81b0-283a-4565-9487-03b39e03faee(org.modellwerkstatt.centrix.globallog)">
   <persistence version="9" />
   <languages>
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
@@ -20,9 +20,14 @@
     <import index="r9e0" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:io.vertx.core.json(org.modellwerkstatt.centrix/)" />
     <import index="zx60" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:io.vertx.ext.eventbus.bridge.tcp(org.modellwerkstatt.centrix/)" />
     <import index="e8lw" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:io.vertx.ext.web.handler(org.modellwerkstatt.centrix/)" />
+    <import index="w08f" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:org.joda.time(org.modellwerkstatt.centrix/)" />
+    <import index="x5li" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:org.joda.time.format(org.modellwerkstatt.centrix/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
+        <child id="1082485599096" name="statements" index="9aQI4" />
+      </concept>
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
@@ -35,6 +40,9 @@
       </concept>
       <concept id="1188208481402" name="jetbrains.mps.baseLanguage.structure.HasAnnotation" flags="ng" index="2AJDlI">
         <child id="1188208488637" name="annotation" index="2AJF6D" />
+      </concept>
+      <concept id="1224848483129" name="jetbrains.mps.baseLanguage.structure.IBLDeprecatable" flags="ng" index="IEa8$">
+        <property id="1224848525476" name="isDeprecated" index="IEkAT" />
       </concept>
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
         <child id="1154032183016" name="body" index="2LFqv$" />
@@ -109,6 +117,7 @@
       </concept>
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
+        <child id="1082485599094" name="ifFalseStatement" index="9aQIa" />
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
       </concept>
@@ -181,7 +190,22 @@
     </language>
   </registry>
   <node concept="312cEu" id="1PUq9fjdOF$">
-    <property role="TrG5h" value="TheLogger" />
+    <property role="TrG5h" value="GlobalLogger" />
+    <node concept="Wx3nA" id="2T5SnS24sOh" role="jymVt">
+      <property role="TrG5h" value="DATETIMEFORMATTER" />
+      <property role="IEkAT" value="false" />
+      <node concept="3Tm1VV" id="2T5SnS24sOi" role="1B3o_S" />
+      <node concept="3uibUv" id="1YUU7GVVr1Q" role="1tU5fm">
+        <ref role="3uigEE" to="x5li:~DateTimeFormatter" resolve="DateTimeFormatter" />
+      </node>
+      <node concept="2YIFZM" id="2T5SnS24sOk" role="33vP2m">
+        <ref role="1Pybhc" to="x5li:~DateTimeFormat" resolve="DateTimeFormat" />
+        <ref role="37wK5l" to="x5li:~DateTimeFormat.forPattern(java.lang.String):org.joda.time.format.DateTimeFormatter" resolve="forPattern" />
+        <node concept="Xl_RD" id="2T5SnS24sOl" role="37wK5m">
+          <property role="Xl_RC" value="EEE HH:mm:ss.SSS" />
+        </node>
+      </node>
+    </node>
     <node concept="312cEg" id="1PUq9fjdRVz" role="jymVt">
       <property role="TrG5h" value="timerId" />
       <node concept="3Tm6S6" id="1PUq9fjdRV$" role="1B3o_S" />
@@ -202,6 +226,13 @@
         <node concept="3uibUv" id="7r6PTxtZ$xa" role="11_B2D">
           <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
         </node>
+      </node>
+    </node>
+    <node concept="312cEg" id="1YUU7GVUASj" role="jymVt">
+      <property role="TrG5h" value="globalLogLogger" />
+      <node concept="3Tm6S6" id="1YUU7GVUASk" role="1B3o_S" />
+      <node concept="3uibUv" id="1YUU7GVUBHa" role="1tU5fm">
+        <ref role="3uigEE" to="q7tw:~Logger" resolve="Logger" />
       </node>
     </node>
     <node concept="2tJIrI" id="1PUq9fjdPR6" role="jymVt" />
@@ -232,8 +263,123 @@
         </node>
       </node>
       <node concept="3clFbS" id="1PUq9fjdPX1" role="3clF47">
-        <node concept="3clFbH" id="1PUq9fjdR4s" role="3cqZAp" />
+        <node concept="3cpWs8" id="1YUU7GVUEzx" role="3cqZAp">
+          <node concept="3cpWsn" id="1YUU7GVUEzy" role="3cpWs9">
+            <property role="TrG5h" value="defaultConfig" />
+            <node concept="3uibUv" id="1YUU7GVUEzz" role="1tU5fm">
+              <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
+            </node>
+            <node concept="2OqwBi" id="1YUU7GVUIpq" role="33vP2m">
+              <node concept="2OqwBi" id="1YUU7GVUGZM" role="2Oq$k0">
+                <node concept="2OqwBi" id="1YUU7GVUEWs" role="2Oq$k0">
+                  <node concept="2ShNRf" id="1YUU7GVUEUN" role="2Oq$k0">
+                    <node concept="1pGfFk" id="1YUU7GVUEUM" role="2ShVmc">
+                      <ref role="37wK5l" to="r9e0:~JsonObject.&lt;init&gt;()" resolve="JsonObject" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="1YUU7GVUF0j" role="2OqNvi">
+                    <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Float):io.vertx.core.json.JsonObject" resolve="put" />
+                    <node concept="Xl_RD" id="1YUU7GVUGl9" role="37wK5m">
+                      <property role="Xl_RC" value="globallog.sock-port" />
+                    </node>
+                    <node concept="3cmrfG" id="1YUU7GVUG$y" role="37wK5m">
+                      <property role="3cmrfH" value="8088" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="1YUU7GVUHkX" role="2OqNvi">
+                  <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Integer):io.vertx.core.json.JsonObject" resolve="put" />
+                  <node concept="Xl_RD" id="1YUU7GVUHnj" role="37wK5m">
+                    <property role="Xl_RC" value="globallog.tcp-port" />
+                  </node>
+                  <node concept="3cmrfG" id="1YUU7GVULuD" role="37wK5m">
+                    <property role="3cmrfH" value="8089" />
+                  </node>
+                </node>
+              </node>
+              <node concept="liA8E" id="1YUU7GVUIHk" role="2OqNvi">
+                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                <node concept="Xl_RD" id="1YUU7GVUIK9" role="37wK5m">
+                  <property role="Xl_RC" value="cors-pattern" />
+                </node>
+                <node concept="Xl_RD" id="1YUU7GVUJw4" role="37wK5m">
+                  <property role="Xl_RC" value="http://localhost:8081/*" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbH" id="1PUq9fjdRhd" role="3cqZAp" />
+        <node concept="3cpWs8" id="1YUU7GVUPL4" role="3cqZAp">
+          <node concept="3cpWsn" id="1YUU7GVUPL5" role="3cpWs9">
+            <property role="TrG5h" value="config" />
+            <node concept="3uibUv" id="1YUU7GVUPL6" role="1tU5fm">
+              <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
+            </node>
+            <node concept="1rXfSq" id="1YUU7GVUQdZ" role="33vP2m">
+              <ref role="37wK5l" to="sv4e:~AbstractVerticle.config():io.vertx.core.json.JsonObject" resolve="config" />
+            </node>
+          </node>
+        </node>
+        <node concept="1DcWWT" id="1YUU7GVURTz" role="3cqZAp">
+          <node concept="3clFbS" id="1YUU7GVURT_" role="2LFqv$">
+            <node concept="3clFbJ" id="1YUU7GVUT6F" role="3cqZAp">
+              <node concept="3clFbS" id="1YUU7GVUT6H" role="3clFbx">
+                <node concept="3clFbF" id="1YUU7GVUTkm" role="3cqZAp">
+                  <node concept="2OqwBi" id="1YUU7GVUTmh" role="3clFbG">
+                    <node concept="37vLTw" id="1YUU7GVUTkl" role="2Oq$k0">
+                      <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
+                    </node>
+                    <node concept="liA8E" id="1YUU7GVUToo" role="2OqNvi">
+                      <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Object):io.vertx.core.json.JsonObject" resolve="put" />
+                      <node concept="37vLTw" id="1YUU7GVUTpy" role="37wK5m">
+                        <ref role="3cqZAo" node="1YUU7GVURTA" resolve="field" />
+                      </node>
+                      <node concept="2OqwBi" id="1YUU7GVUTyG" role="37wK5m">
+                        <node concept="37vLTw" id="1YUU7GVUTsY" role="2Oq$k0">
+                          <ref role="3cqZAo" node="1YUU7GVUEzy" resolve="defaultConfig" />
+                        </node>
+                        <node concept="liA8E" id="1YUU7GVUTBG" role="2OqNvi">
+                          <ref role="37wK5l" to="r9e0:~JsonObject.getValue(java.lang.String):java.lang.Object" resolve="getValue" />
+                          <node concept="37vLTw" id="1YUU7GVUTCZ" role="37wK5m">
+                            <ref role="3cqZAo" node="1YUU7GVURTA" resolve="field" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3fqX7Q" id="1YUU7GVUTi9" role="3clFbw">
+                <node concept="2OqwBi" id="1YUU7GVUTib" role="3fr31v">
+                  <node concept="37vLTw" id="1YUU7GVUTic" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
+                  </node>
+                  <node concept="liA8E" id="1YUU7GVUTid" role="2OqNvi">
+                    <ref role="37wK5l" to="r9e0:~JsonObject.containsKey(java.lang.String):boolean" resolve="containsKey" />
+                    <node concept="37vLTw" id="1YUU7GVUTie" role="37wK5m">
+                      <ref role="3cqZAo" node="1YUU7GVURTA" resolve="field" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWsn" id="1YUU7GVURTA" role="1Duv9x">
+            <property role="TrG5h" value="field" />
+            <node concept="17QB3L" id="1YUU7GVUSlT" role="1tU5fm" />
+          </node>
+          <node concept="2OqwBi" id="1YUU7GVUSHX" role="1DdaDG">
+            <node concept="37vLTw" id="1YUU7GVUSpd" role="2Oq$k0">
+              <ref role="3cqZAo" node="1YUU7GVUEzy" resolve="defaultConfig" />
+            </node>
+            <node concept="liA8E" id="1YUU7GVUT2v" role="2OqNvi">
+              <ref role="37wK5l" to="r9e0:~JsonObject.fieldNames():java.util.Set" resolve="fieldNames" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1YUU7GVUNIi" role="3cqZAp" />
+        <node concept="3clFbH" id="1YUU7GVUVSb" role="3cqZAp" />
         <node concept="3cpWs8" id="4NNU34MBNfz" role="3cqZAp">
           <node concept="3cpWsn" id="4NNU34MBNf$" role="3cpWs9">
             <property role="TrG5h" value="router" />
@@ -330,8 +476,16 @@
                                 <node concept="2YIFZM" id="7r6PTxtZLfO" role="2Oq$k0">
                                   <ref role="37wK5l" to="e8lw:~CorsHandler.create(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="create" />
                                   <ref role="1Pybhc" to="e8lw:~CorsHandler" resolve="CorsHandler" />
-                                  <node concept="Xl_RD" id="7r6PTxtZLfP" role="37wK5m">
-                                    <property role="Xl_RC" value="http://localhost:8081/*" />
+                                  <node concept="2OqwBi" id="1YUU7GVUWyR" role="37wK5m">
+                                    <node concept="37vLTw" id="1YUU7GVUWtS" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
+                                    </node>
+                                    <node concept="liA8E" id="1YUU7GVUWCv" role="2OqNvi">
+                                      <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
+                                      <node concept="Xl_RD" id="1YUU7GVUWGJ" role="37wK5m">
+                                        <property role="Xl_RC" value="cors-pattern" />
+                                      </node>
+                                    </node>
                                   </node>
                                 </node>
                                 <node concept="liA8E" id="4NNU34MBRGT" role="2OqNvi">
@@ -486,8 +640,16 @@
             </node>
             <node concept="liA8E" id="4NNU34MCp3C" role="2OqNvi">
               <ref role="37wK5l" to="q0a0:~HttpServer.listen(int):io.vertx.core.http.HttpServer" resolve="listen" />
-              <node concept="3cmrfG" id="4NNU34MCp4R" role="37wK5m">
-                <property role="3cmrfH" value="8088" />
+              <node concept="2OqwBi" id="1YUU7GVUXjg" role="37wK5m">
+                <node concept="37vLTw" id="1YUU7GVUXdC" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
+                </node>
+                <node concept="liA8E" id="1YUU7GVUXqh" role="2OqNvi">
+                  <ref role="37wK5l" to="r9e0:~JsonObject.getInteger(java.lang.String):java.lang.Integer" resolve="getInteger" />
+                  <node concept="Xl_RD" id="1YUU7GVUXrq" role="37wK5m">
+                    <property role="Xl_RC" value="globallog.sock-port" />
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -550,8 +712,16 @@
             </node>
             <node concept="liA8E" id="7r6PTxtZJrK" role="2OqNvi">
               <ref role="37wK5l" to="zx60:~TcpEventBusBridge.listen(int):io.vertx.ext.eventbus.bridge.tcp.TcpEventBusBridge" resolve="listen" />
-              <node concept="3cmrfG" id="7r6PTxtZJse" role="37wK5m">
-                <property role="3cmrfH" value="8089" />
+              <node concept="2OqwBi" id="1YUU7GVUXvv" role="37wK5m">
+                <node concept="37vLTw" id="1YUU7GVUXvw" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
+                </node>
+                <node concept="liA8E" id="1YUU7GVUXvx" role="2OqNvi">
+                  <ref role="37wK5l" to="r9e0:~JsonObject.getInteger(java.lang.String):java.lang.Integer" resolve="getInteger" />
+                  <node concept="Xl_RD" id="1YUU7GVUXEW" role="37wK5m">
+                    <property role="Xl_RC" value="globallog.tcp-port" />
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -574,6 +744,22 @@
           </node>
         </node>
         <node concept="3clFbH" id="4NNU34MBx54" role="3cqZAp" />
+        <node concept="3clFbF" id="1YUU7GVUCv8" role="3cqZAp">
+          <node concept="37vLTI" id="1YUU7GVUCOP" role="3clFbG">
+            <node concept="37vLTw" id="1YUU7GVUCv6" role="37vLTJ">
+              <ref role="3cqZAo" node="1YUU7GVUASj" resolve="globalLogLogger" />
+            </node>
+            <node concept="2YIFZM" id="7r6PTxtZAWI" role="37vLTx">
+              <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
+              <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.String):org.apache.log4j.Logger" resolve="getLogger" />
+              <node concept="Xl_RD" id="7r6PTxtZAXx" role="37wK5m">
+                <property role="Xl_RC" value="org.modellwerkstatt.globallog" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1YUU7GVUBJF" role="3cqZAp" />
+        <node concept="3clFbH" id="1YUU7GVV9Wm" role="3cqZAp" />
         <node concept="3clFbF" id="4NNU34MBxRa" role="3cqZAp">
           <node concept="37vLTI" id="4NNU34MBy23" role="3clFbG">
             <node concept="2OqwBi" id="4NNU34MBydk" role="37vLTx">
@@ -626,6 +812,30 @@
                             </node>
                           </node>
                           <node concept="3clFbH" id="7r6PTxtZD_c" role="3cqZAp" />
+                          <node concept="3cpWs8" id="1YUU7GVV9c1" role="3cqZAp">
+                            <node concept="3cpWsn" id="1YUU7GVV9c2" role="3cpWs9">
+                              <property role="TrG5h" value="msgTimestamp" />
+                              <node concept="3uibUv" id="1YUU7GVV9c3" role="1tU5fm">
+                                <ref role="3uigEE" to="w08f:~DateTime" resolve="DateTime" />
+                              </node>
+                              <node concept="2ShNRf" id="1YUU7GVV9wl" role="33vP2m">
+                                <node concept="1pGfFk" id="1YUU7GVV9w9" role="2ShVmc">
+                                  <ref role="37wK5l" to="w08f:~DateTime.&lt;init&gt;(java.lang.Object)" resolve="DateTime" />
+                                  <node concept="2OqwBi" id="1YUU7GVV9kY" role="37wK5m">
+                                    <node concept="37vLTw" id="1YUU7GVV9jl" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="7r6PTxtZB_H" resolve="object" />
+                                    </node>
+                                    <node concept="liA8E" id="1YUU7GVV9pq" role="2OqNvi">
+                                      <ref role="37wK5l" to="r9e0:~JsonObject.getLong(java.lang.String):java.lang.Long" resolve="getLong" />
+                                      <node concept="Xl_RD" id="1YUU7GVV9qD" role="37wK5m">
+                                        <property role="Xl_RC" value="millis" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
                           <node concept="3cpWs8" id="7r6PTxtZBNg" role="3cqZAp">
                             <node concept="3cpWsn" id="7r6PTxtZBNj" role="3cpWs9">
                               <property role="TrG5h" value="msgToLog" />
@@ -644,6 +854,40 @@
                                 </node>
                                 <node concept="3cpWs3" id="7r6PTxtZC6a" role="3uHU7B">
                                   <node concept="3cpWs3" id="7r6PTxtZCdY" role="3uHU7B">
+                                    <node concept="3cpWs3" id="7r6PTxtZC2W" role="3uHU7B">
+                                      <node concept="3cpWs3" id="1YUU7GVVuen" role="3uHU7B">
+                                        <node concept="2OqwBi" id="7r6PTxtZBSx" role="3uHU7w">
+                                          <node concept="37vLTw" id="7r6PTxtZBQ4" role="2Oq$k0">
+                                            <ref role="3cqZAo" node="7r6PTxtZB_H" resolve="object" />
+                                          </node>
+                                          <node concept="liA8E" id="7r6PTxtZBWV" role="2OqNvi">
+                                            <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
+                                            <node concept="Xl_RD" id="7r6PTxtZBYG" role="37wK5m">
+                                              <property role="Xl_RC" value="userName" />
+                                            </node>
+                                          </node>
+                                        </node>
+                                        <node concept="3cpWs3" id="1YUU7GVVupG" role="3uHU7B">
+                                          <node concept="Xl_RD" id="1YUU7GVVuqr" role="3uHU7w">
+                                            <property role="Xl_RC" value=" - " />
+                                          </node>
+                                          <node concept="2OqwBi" id="1YUU7GVVtLN" role="3uHU7B">
+                                            <node concept="37vLTw" id="1YUU7GVVuhU" role="2Oq$k0">
+                                              <ref role="3cqZAo" node="2T5SnS24sOh" resolve="DATETIMEFORMATTER" />
+                                            </node>
+                                            <node concept="liA8E" id="1YUU7GVVtR_" role="2OqNvi">
+                                              <ref role="37wK5l" to="x5li:~DateTimeFormatter.print(org.joda.time.ReadableInstant):java.lang.String" resolve="print" />
+                                              <node concept="37vLTw" id="1YUU7GVVtWK" role="37wK5m">
+                                                <ref role="3cqZAo" node="1YUU7GVV9c2" resolve="msgTimestamp" />
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                      <node concept="Xl_RD" id="7r6PTxtZC3F" role="3uHU7w">
+                                        <property role="Xl_RC" value="/" />
+                                      </node>
+                                    </node>
                                     <node concept="2OqwBi" id="7r6PTxtZC_G" role="3uHU7w">
                                       <node concept="2OqwBi" id="7r6PTxtZCkJ" role="2Oq$k0">
                                         <node concept="37vLTw" id="7r6PTxtZCho" role="2Oq$k0">
@@ -660,22 +904,6 @@
                                         <ref role="37wK5l" to="wyt6:~Integer.toString():java.lang.String" resolve="toString" />
                                       </node>
                                     </node>
-                                    <node concept="3cpWs3" id="7r6PTxtZC2W" role="3uHU7B">
-                                      <node concept="2OqwBi" id="7r6PTxtZBSx" role="3uHU7B">
-                                        <node concept="37vLTw" id="7r6PTxtZBQ4" role="2Oq$k0">
-                                          <ref role="3cqZAo" node="7r6PTxtZB_H" resolve="object" />
-                                        </node>
-                                        <node concept="liA8E" id="7r6PTxtZBWV" role="2OqNvi">
-                                          <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
-                                          <node concept="Xl_RD" id="7r6PTxtZBYG" role="37wK5m">
-                                            <property role="Xl_RC" value="userName" />
-                                          </node>
-                                        </node>
-                                      </node>
-                                      <node concept="Xl_RD" id="7r6PTxtZC3F" role="3uHU7w">
-                                        <property role="Xl_RC" value="/" />
-                                      </node>
-                                    </node>
                                   </node>
                                   <node concept="Xl_RD" id="7r6PTxtZCJA" role="3uHU7w">
                                     <property role="Xl_RC" value=": " />
@@ -686,18 +914,14 @@
                           </node>
                           <node concept="3clFbF" id="7r6PTxtZAJG" role="3cqZAp">
                             <node concept="2OqwBi" id="7r6PTxtZANK" role="3clFbG">
-                              <node concept="2YIFZM" id="7r6PTxtZAWI" role="2Oq$k0">
-                                <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.String):org.apache.log4j.Logger" resolve="getLogger" />
-                                <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
-                                <node concept="Xl_RD" id="7r6PTxtZAXx" role="37wK5m">
-                                  <property role="Xl_RC" value="org.modellwerkstatt.globallog" />
-                                </node>
-                              </node>
                               <node concept="liA8E" id="7r6PTxtZB3P" role="2OqNvi">
                                 <ref role="37wK5l" to="q7tw:~Category.info(java.lang.Object):void" resolve="info" />
                                 <node concept="37vLTw" id="7r6PTxtZDw_" role="37wK5m">
                                   <ref role="3cqZAo" node="7r6PTxtZBNj" resolve="msgToLog" />
                                 </node>
+                              </node>
+                              <node concept="37vLTw" id="1YUU7GVUD6k" role="2Oq$k0">
+                                <ref role="3cqZAo" node="1YUU7GVUASj" resolve="globalLogLogger" />
                               </node>
                             </node>
                           </node>
@@ -750,76 +974,62 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="1PUq9fjdR1N" role="3cqZAp">
-          <node concept="1rXfSq" id="1PUq9fjdR1M" role="3clFbG">
-            <ref role="37wK5l" node="1PUq9fjdQlu" resolve="ld" />
-            <node concept="3cpWs3" id="7r6PTxtZlr1" role="37wK5m">
-              <node concept="10M0yZ" id="7r6PTxtZlvi" role="3uHU7w">
-                <ref role="1PxDUh" node="1PUq9fjdRCC" resolve="FSMaxAgeDeleter" />
-                <ref role="3cqZAo" node="7r6PTxtZdsr" resolve="LOG_DIR" />
+        <node concept="3clFbF" id="3qyYjZ1xbTj" role="3cqZAp">
+          <node concept="2OqwBi" id="3qyYjZ1xdyX" role="3clFbG">
+            <node concept="2YIFZM" id="3qyYjZ1xcv0" role="2Oq$k0">
+              <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
+              <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
+              <node concept="3VsKOn" id="3qyYjZ1xdc_" role="37wK5m">
+                <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="GlobalLogger" />
               </node>
-              <node concept="3cpWs3" id="7r6PTxtZgcU" role="3uHU7B">
-                <node concept="3cpWs3" id="7r6PTxtZg3E" role="3uHU7B">
-                  <node concept="3cpWs3" id="1PUq9fjdSz6" role="3uHU7B">
-                    <node concept="3cpWs3" id="1PUq9fjdSlR" role="3uHU7B">
-                      <node concept="3cpWs3" id="1PUq9fjdSg5" role="3uHU7B">
-                        <node concept="Xl_RD" id="1PUq9fjdR39" role="3uHU7B">
-                          <property role="Xl_RC" value="timer with id registered " />
-                        </node>
-                        <node concept="37vLTw" id="1PUq9fjdShg" role="3uHU7w">
-                          <ref role="3cqZAo" node="1PUq9fjdRVz" resolve="timerId" />
-                        </node>
-                      </node>
-                      <node concept="Xl_RD" id="1PUq9fjdSme" role="3uHU7w">
-                        <property role="Xl_RC" value=", interval is " />
-                      </node>
-                    </node>
-                    <node concept="10M0yZ" id="7r6PTxtYUP3" role="3uHU7w">
-                      <ref role="1PxDUh" node="1PUq9fjdRCC" resolve="FSMaxAgeDeleter" />
-                      <ref role="3cqZAo" node="7r6PTxtYPEf" resolve="ONE_DAY" />
-                    </node>
-                  </node>
-                  <node concept="Xl_RD" id="7r6PTxtZg64" role="3uHU7w">
-                    <property role="Xl_RC" value=" on " />
-                  </node>
+            </node>
+            <node concept="liA8E" id="3qyYjZ1xdY$" role="2OqNvi">
+              <ref role="37wK5l" to="q7tw:~Category.error(java.lang.Object):void" resolve="error" />
+              <node concept="3cpWs3" id="7r6PTxtZlr1" role="37wK5m">
+                <node concept="10M0yZ" id="7r6PTxtZlvi" role="3uHU7w">
+                  <ref role="1PxDUh" node="1PUq9fjdRCC" resolve="FSMaxAgeDeleter" />
+                  <ref role="3cqZAo" node="7r6PTxtZdsr" resolve="LOG_DIR" />
                 </node>
-                <node concept="1rXfSq" id="7r6PTxtZlnk" role="3uHU7w">
-                  <ref role="37wK5l" node="7r6PTxtZhnR" resolve="getCurrentPath" />
+                <node concept="3cpWs3" id="7r6PTxtZgcU" role="3uHU7B">
+                  <node concept="3cpWs3" id="7r6PTxtZg3E" role="3uHU7B">
+                    <node concept="3cpWs3" id="1PUq9fjdSz6" role="3uHU7B">
+                      <node concept="3cpWs3" id="1PUq9fjdSlR" role="3uHU7B">
+                        <node concept="3cpWs3" id="1PUq9fjdSg5" role="3uHU7B">
+                          <node concept="Xl_RD" id="1PUq9fjdR39" role="3uHU7B">
+                            <property role="Xl_RC" value="STARTUP: timer with id registered " />
+                          </node>
+                          <node concept="37vLTw" id="1PUq9fjdShg" role="3uHU7w">
+                            <ref role="3cqZAo" node="1PUq9fjdRVz" resolve="timerId" />
+                          </node>
+                        </node>
+                        <node concept="Xl_RD" id="1PUq9fjdSme" role="3uHU7w">
+                          <property role="Xl_RC" value=", interval is " />
+                        </node>
+                      </node>
+                      <node concept="10M0yZ" id="7r6PTxtYUP3" role="3uHU7w">
+                        <ref role="3cqZAo" node="7r6PTxtYPEf" resolve="ONE_DAY" />
+                        <ref role="1PxDUh" node="1PUq9fjdRCC" resolve="FSMaxAgeDeleter" />
+                      </node>
+                    </node>
+                    <node concept="Xl_RD" id="7r6PTxtZg64" role="3uHU7w">
+                      <property role="Xl_RC" value=" on " />
+                    </node>
+                  </node>
+                  <node concept="1rXfSq" id="7r6PTxtZlnk" role="3uHU7w">
+                    <ref role="37wK5l" node="7r6PTxtZhnR" resolve="getCurrentPath" />
+                  </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="3qyYjZ1xaGt" role="3cqZAp" />
       </node>
       <node concept="2AHcQZ" id="1PUq9fjdPX2" role="2AJF6D">
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
     </node>
     <node concept="2tJIrI" id="1PUq9fjdPju" role="jymVt" />
-    <node concept="2tJIrI" id="1PUq9fjdQ6q" role="jymVt" />
-    <node concept="2tJIrI" id="1PUq9fjdQ6T" role="jymVt" />
-    <node concept="3clFb_" id="1PUq9fjdQ8o" role="jymVt">
-      <property role="1EzhhJ" value="false" />
-      <property role="TrG5h" value="stop" />
-      <property role="DiZV1" value="false" />
-      <property role="od$2w" value="false" />
-      <node concept="3Tm1VV" id="1PUq9fjdQ8p" role="1B3o_S" />
-      <node concept="3cqZAl" id="1PUq9fjdQ8r" role="3clF45" />
-      <node concept="3clFbS" id="1PUq9fjdQ8t" role="3clF47">
-        <node concept="3clFbF" id="1PUq9fjdQuK" role="3cqZAp">
-          <node concept="1rXfSq" id="1PUq9fjdQuI" role="3clFbG">
-            <ref role="37wK5l" node="1PUq9fjdQlu" resolve="ld" />
-            <node concept="Xl_RD" id="1PUq9fjdQwR" role="37wK5m">
-              <property role="Xl_RC" value="stop called." />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="2AHcQZ" id="1PUq9fjdQ8u" role="2AJF6D">
-        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
-      </node>
-    </node>
-    <node concept="2tJIrI" id="1PUq9fjdQje" role="jymVt" />
     <node concept="3clFb_" id="7r6PTxtZhnR" role="jymVt">
       <property role="TrG5h" value="getCurrentPath" />
       <node concept="17QB3L" id="7r6PTxtZjYQ" role="3clF45" />
@@ -891,7 +1101,7 @@
                   </node>
                   <node concept="2OqwBi" id="1PUq9fjdQEi" role="3uHU7B">
                     <node concept="3VsKOn" id="1PUq9fjdQAT" role="2Oq$k0">
-                      <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="TheLogger" />
+                      <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="GlobalLogger" />
                     </node>
                     <node concept="liA8E" id="1PUq9fjdQK3" role="2OqNvi">
                       <ref role="37wK5l" to="wyt6:~Class.getName():java.lang.String" resolve="getName" />
@@ -921,7 +1131,7 @@
       <node concept="3cpWsb" id="7r6PTxtYPB6" role="1tU5fm" />
       <node concept="3Tm1VV" id="7r6PTxtYUtM" role="1B3o_S" />
       <node concept="3cmrfG" id="7r6PTxtYQ3R" role="33vP2m">
-        <property role="3cmrfH" value="86400" />
+        <property role="3cmrfH" value="86400000" />
       </node>
     </node>
     <node concept="Wx3nA" id="7r6PTxtYQcF" role="jymVt">
@@ -1036,6 +1246,7 @@
                     <ref role="1Y3XeK" to="sv4e:~Handler" resolve="Handler" />
                     <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
                     <node concept="3Tm1VV" id="7r6PTxtYLKd" role="1B3o_S" />
+                    <node concept="2tJIrI" id="1YUU7GVVHaU" role="jymVt" />
                     <node concept="3clFb_" id="7r6PTxtYLKe" role="jymVt">
                       <property role="1EzhhJ" value="false" />
                       <property role="TrG5h" value="handle" />
@@ -1044,7 +1255,7 @@
                       <node concept="3Tm1VV" id="7r6PTxtYLKf" role="1B3o_S" />
                       <node concept="3cqZAl" id="7r6PTxtYLKh" role="3clF45" />
                       <node concept="37vLTG" id="7r6PTxtYLKi" role="3clF46">
-                        <property role="TrG5h" value="filenames" />
+                        <property role="TrG5h" value="result" />
                         <node concept="3uibUv" id="7r6PTxtYMpS" role="1tU5fm">
                           <ref role="3uigEE" to="sv4e:~AsyncResult" resolve="AsyncResult" />
                           <node concept="3uibUv" id="7r6PTxtYMpT" role="11_B2D">
@@ -1056,48 +1267,86 @@
                         </node>
                       </node>
                       <node concept="3clFbS" id="7r6PTxtYLKk" role="3clF47">
-                        <node concept="1DcWWT" id="7r6PTxtYN16" role="3cqZAp">
-                          <node concept="3clFbS" id="7r6PTxtYN18" role="2LFqv$">
-                            <node concept="3clFbF" id="7r6PTxtYMuJ" role="3cqZAp">
-                              <node concept="2OqwBi" id="7r6PTxtYMvZ" role="3clFbG">
-                                <node concept="37vLTw" id="7r6PTxtYMuH" role="2Oq$k0">
-                                  <ref role="3cqZAo" node="7r6PTxtYLlt" resolve="fs" />
-                                </node>
-                                <node concept="liA8E" id="7r6PTxtYMyh" role="2OqNvi">
-                                  <ref role="37wK5l" to="ohy4:~FileSystem.props(java.lang.String,io.vertx.core.Handler):io.vertx.core.file.FileSystem" resolve="props" />
-                                  <node concept="37vLTw" id="7r6PTxtYO1Z" role="37wK5m">
-                                    <ref role="3cqZAo" node="7r6PTxtYN19" resolve="fName" />
-                                  </node>
-                                  <node concept="2ShNRf" id="7r6PTxtZ9xk" role="37wK5m">
-                                    <node concept="1pGfFk" id="7r6PTxtZ9WE" role="2ShVmc">
-                                      <ref role="37wK5l" node="7r6PTxtZ2dg" resolve="FileDeleter" />
-                                      <node concept="37vLTw" id="7r6PTxtZ9Z0" role="37wK5m">
-                                        <ref role="3cqZAo" node="7r6PTxtYLlt" resolve="fs" />
-                                      </node>
-                                      <node concept="37vLTw" id="7r6PTxtZa2t" role="37wK5m">
+                        <node concept="3clFbJ" id="1YUU7GVVGum" role="3cqZAp">
+                          <node concept="3clFbS" id="1YUU7GVVGuo" role="3clFbx">
+                            <node concept="1DcWWT" id="7r6PTxtYN16" role="3cqZAp">
+                              <node concept="3clFbS" id="7r6PTxtYN18" role="2LFqv$">
+                                <node concept="3clFbF" id="7r6PTxtYMuJ" role="3cqZAp">
+                                  <node concept="2OqwBi" id="7r6PTxtYMvZ" role="3clFbG">
+                                    <node concept="37vLTw" id="7r6PTxtYMuH" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="7r6PTxtYLlt" resolve="fs" />
+                                    </node>
+                                    <node concept="liA8E" id="7r6PTxtYMyh" role="2OqNvi">
+                                      <ref role="37wK5l" to="ohy4:~FileSystem.props(java.lang.String,io.vertx.core.Handler):io.vertx.core.file.FileSystem" resolve="props" />
+                                      <node concept="37vLTw" id="7r6PTxtYO1Z" role="37wK5m">
                                         <ref role="3cqZAo" node="7r6PTxtYN19" resolve="fName" />
                                       </node>
-                                      <node concept="37vLTw" id="7r6PTxtZa5t" role="37wK5m">
-                                        <ref role="3cqZAo" node="7r6PTxtYOFI" resolve="maxAge" />
+                                      <node concept="2ShNRf" id="7r6PTxtZ9xk" role="37wK5m">
+                                        <node concept="1pGfFk" id="7r6PTxtZ9WE" role="2ShVmc">
+                                          <ref role="37wK5l" node="7r6PTxtZ2dg" resolve="FileDeleter" />
+                                          <node concept="37vLTw" id="7r6PTxtZ9Z0" role="37wK5m">
+                                            <ref role="3cqZAo" node="7r6PTxtYLlt" resolve="fs" />
+                                          </node>
+                                          <node concept="37vLTw" id="7r6PTxtZa2t" role="37wK5m">
+                                            <ref role="3cqZAo" node="7r6PTxtYN19" resolve="fName" />
+                                          </node>
+                                          <node concept="37vLTw" id="7r6PTxtZa5t" role="37wK5m">
+                                            <ref role="3cqZAo" node="7r6PTxtYOFI" resolve="maxAge" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="3clFbH" id="7r6PTxtYN17" role="3cqZAp" />
+                              </node>
+                              <node concept="3cpWsn" id="7r6PTxtYN19" role="1Duv9x">
+                                <property role="TrG5h" value="fName" />
+                                <property role="3TUv4t" value="false" />
+                                <node concept="17QB3L" id="7r6PTxtYN5C" role="1tU5fm" />
+                              </node>
+                              <node concept="2OqwBi" id="7r6PTxtYNrg" role="1DdaDG">
+                                <node concept="37vLTw" id="7r6PTxtYN8f" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="7r6PTxtYLKi" resolve="result" />
+                                </node>
+                                <node concept="liA8E" id="7r6PTxtYN_1" role="2OqNvi">
+                                  <ref role="37wK5l" to="sv4e:~AsyncResult.result():java.lang.Object" resolve="result" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="2OqwBi" id="1YUU7GVVGH3" role="3clFbw">
+                            <node concept="37vLTw" id="1YUU7GVVGAh" role="2Oq$k0">
+                              <ref role="3cqZAo" node="7r6PTxtYLKi" resolve="result" />
+                            </node>
+                            <node concept="liA8E" id="1YUU7GVVGXM" role="2OqNvi">
+                              <ref role="37wK5l" to="sv4e:~AsyncResult.succeeded():boolean" resolve="succeeded" />
+                            </node>
+                          </node>
+                          <node concept="9aQIb" id="1YUU7GVVHir" role="9aQIa">
+                            <node concept="3clFbS" id="1YUU7GVVHis" role="9aQI4">
+                              <node concept="3clFbF" id="1YUU7GVVHqD" role="3cqZAp">
+                                <node concept="2OqwBi" id="1YUU7GVVHDG" role="3clFbG">
+                                  <node concept="2YIFZM" id="1YUU7GVVHvB" role="2Oq$k0">
+                                    <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
+                                    <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
+                                    <node concept="3VsKOn" id="1YUU7GVVHAy" role="37wK5m">
+                                      <ref role="3VsUkX" node="1PUq9fjdRCC" resolve="FSMaxAgeDeleter" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="1YUU7GVVHMc" role="2OqNvi">
+                                    <ref role="37wK5l" to="q7tw:~Category.error(java.lang.Object):void" resolve="error" />
+                                    <node concept="2OqwBi" id="1YUU7GVVHQk" role="37wK5m">
+                                      <node concept="37vLTw" id="1YUU7GVVHNU" role="2Oq$k0">
+                                        <ref role="3cqZAo" node="7r6PTxtYLKi" resolve="result" />
+                                      </node>
+                                      <node concept="liA8E" id="1YUU7GVVHUE" role="2OqNvi">
+                                        <ref role="37wK5l" to="sv4e:~AsyncResult.cause():java.lang.Throwable" resolve="cause" />
                                       </node>
                                     </node>
                                   </node>
                                 </node>
                               </node>
-                            </node>
-                            <node concept="3clFbH" id="7r6PTxtYN17" role="3cqZAp" />
-                          </node>
-                          <node concept="3cpWsn" id="7r6PTxtYN19" role="1Duv9x">
-                            <property role="TrG5h" value="fName" />
-                            <property role="3TUv4t" value="false" />
-                            <node concept="17QB3L" id="7r6PTxtYN5C" role="1tU5fm" />
-                          </node>
-                          <node concept="2OqwBi" id="7r6PTxtYNrg" role="1DdaDG">
-                            <node concept="37vLTw" id="7r6PTxtYN8f" role="2Oq$k0">
-                              <ref role="3cqZAo" node="7r6PTxtYLKi" resolve="filenames" />
-                            </node>
-                            <node concept="liA8E" id="7r6PTxtYN_1" role="2OqNvi">
-                              <ref role="37wK5l" to="sv4e:~AsyncResult.result():java.lang.Object" resolve="result" />
                             </node>
                           </node>
                         </node>
