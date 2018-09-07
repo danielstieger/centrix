@@ -22,6 +22,7 @@
     <import index="e8lw" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:io.vertx.ext.web.handler(org.modellwerkstatt.centrix/)" />
     <import index="w08f" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:org.joda.time(org.modellwerkstatt.centrix/)" />
     <import index="x5li" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:org.joda.time.format(org.modellwerkstatt.centrix/)" />
+    <import index="n0op" ref="r:391c5af4-225a-4c7b-ad3c-c4456f9114f3(org.modellwerkstatt.centrix.testbox)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -173,6 +174,12 @@
       <concept id="1144230876926" name="jetbrains.mps.baseLanguage.structure.AbstractForStatement" flags="nn" index="1DupvO">
         <child id="1144230900587" name="variable" index="1Duv9x" />
       </concept>
+      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
+        <property id="6329021646629104958" name="text" index="3SKdUp" />
+      </concept>
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+      </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
       <concept id="1116615150612" name="jetbrains.mps.baseLanguage.structure.ClassifierClassExpression" flags="nn" index="3VsKOn">
@@ -236,6 +243,18 @@
       </node>
     </node>
     <node concept="2tJIrI" id="1PUq9fjdPR6" role="jymVt" />
+    <node concept="312cEg" id="1SDXsyHzRTQ" role="jymVt">
+      <property role="TrG5h" value="keyerConsumer" />
+      <node concept="3Tm6S6" id="1SDXsyHzRTR" role="1B3o_S" />
+      <node concept="3uibUv" id="1SDXsyHzRTS" role="1tU5fm">
+        <ref role="3uigEE" to="jr46:~MessageConsumer" resolve="MessageConsumer" />
+        <node concept="3uibUv" id="1SDXsyHzRTT" role="11_B2D">
+          <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="1SDXsyHzOYC" role="jymVt" />
+    <node concept="2tJIrI" id="1SDXsyHzPCL" role="jymVt" />
     <node concept="3clFbW" id="1PUq9fjdPS6" role="jymVt">
       <node concept="3cqZAl" id="1PUq9fjdPS8" role="3clF45" />
       <node concept="3Tm1VV" id="1PUq9fjdPS9" role="1B3o_S" />
@@ -662,24 +681,60 @@
             <node concept="3uibUv" id="7r6PTxtZHy3" role="1tU5fm">
               <ref role="3uigEE" to="5orp:~BridgeOptions" resolve="BridgeOptions" />
             </node>
-            <node concept="2OqwBi" id="7r6PTxtZHOT" role="33vP2m">
-              <node concept="2ShNRf" id="7r6PTxtZHzB" role="2Oq$k0">
-                <node concept="1pGfFk" id="7r6PTxtZHNS" role="2ShVmc">
-                  <ref role="37wK5l" to="5orp:~BridgeOptions.&lt;init&gt;()" resolve="BridgeOptions" />
+            <node concept="2OqwBi" id="1SDXsyHzXQF" role="33vP2m">
+              <node concept="2OqwBi" id="1SDXsyHzXHj" role="2Oq$k0">
+                <node concept="2OqwBi" id="7r6PTxtZHOT" role="2Oq$k0">
+                  <node concept="2ShNRf" id="7r6PTxtZHzB" role="2Oq$k0">
+                    <node concept="1pGfFk" id="7r6PTxtZHNS" role="2ShVmc">
+                      <ref role="37wK5l" to="5orp:~BridgeOptions.&lt;init&gt;()" resolve="BridgeOptions" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="7r6PTxtZHQw" role="2OqNvi">
+                    <ref role="37wK5l" to="5orp:~BridgeOptions.addInboundPermitted(io.vertx.ext.bridge.PermittedOptions):io.vertx.ext.bridge.BridgeOptions" resolve="addInboundPermitted" />
+                    <node concept="2OqwBi" id="7r6PTxtZI9b" role="37wK5m">
+                      <node concept="2ShNRf" id="7r6PTxtZHRE" role="2Oq$k0">
+                        <node concept="1pGfFk" id="7r6PTxtZI86" role="2ShVmc">
+                          <ref role="37wK5l" to="5orp:~PermittedOptions.&lt;init&gt;()" resolve="PermittedOptions" />
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="7r6PTxtZIb0" role="2OqNvi">
+                        <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String):io.vertx.ext.bridge.PermittedOptions" resolve="setAddress" />
+                        <node concept="Xl_RD" id="7r6PTxtZIgG" role="37wK5m">
+                          <property role="Xl_RC" value="globallog" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="1SDXsyHzXLg" role="2OqNvi">
+                  <ref role="37wK5l" to="5orp:~BridgeOptions.addInboundPermitted(io.vertx.ext.bridge.PermittedOptions):io.vertx.ext.bridge.BridgeOptions" resolve="addInboundPermitted" />
+                  <node concept="2OqwBi" id="1SDXsyHzXLh" role="37wK5m">
+                    <node concept="2ShNRf" id="1SDXsyHzXLi" role="2Oq$k0">
+                      <node concept="1pGfFk" id="1SDXsyHzXLj" role="2ShVmc">
+                        <ref role="37wK5l" to="5orp:~PermittedOptions.&lt;init&gt;()" resolve="PermittedOptions" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="1SDXsyHzXLk" role="2OqNvi">
+                      <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String):io.vertx.ext.bridge.PermittedOptions" resolve="setAddress" />
+                      <node concept="Xl_RD" id="1SDXsyHzXLl" role="37wK5m">
+                        <property role="Xl_RC" value="keyer" />
+                      </node>
+                    </node>
+                  </node>
                 </node>
               </node>
-              <node concept="liA8E" id="7r6PTxtZHQw" role="2OqNvi">
-                <ref role="37wK5l" to="5orp:~BridgeOptions.addInboundPermitted(io.vertx.ext.bridge.PermittedOptions):io.vertx.ext.bridge.BridgeOptions" resolve="addInboundPermitted" />
-                <node concept="2OqwBi" id="7r6PTxtZI9b" role="37wK5m">
-                  <node concept="2ShNRf" id="7r6PTxtZHRE" role="2Oq$k0">
-                    <node concept="1pGfFk" id="7r6PTxtZI86" role="2ShVmc">
+              <node concept="liA8E" id="3qyYjZ1wYWV" role="2OqNvi">
+                <ref role="37wK5l" to="5orp:~BridgeOptions.addOutboundPermitted(io.vertx.ext.bridge.PermittedOptions):io.vertx.ext.bridge.BridgeOptions" resolve="addOutboundPermitted" />
+                <node concept="2OqwBi" id="3qyYjZ1wYYW" role="37wK5m">
+                  <node concept="2ShNRf" id="3qyYjZ1wYYX" role="2Oq$k0">
+                    <node concept="1pGfFk" id="3qyYjZ1wYYY" role="2ShVmc">
                       <ref role="37wK5l" to="5orp:~PermittedOptions.&lt;init&gt;()" resolve="PermittedOptions" />
                     </node>
                   </node>
-                  <node concept="liA8E" id="7r6PTxtZIb0" role="2OqNvi">
+                  <node concept="liA8E" id="3qyYjZ1wYYZ" role="2OqNvi">
                     <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String):io.vertx.ext.bridge.PermittedOptions" resolve="setAddress" />
-                    <node concept="Xl_RD" id="7r6PTxtZIgG" role="37wK5m">
-                      <property role="Xl_RC" value="globallog" />
+                    <node concept="Xl_RD" id="3qyYjZ1wYZ0" role="37wK5m">
+                      <property role="Xl_RC" value="keyer" />
                     </node>
                   </node>
                 </node>
@@ -1024,6 +1079,266 @@
           </node>
         </node>
         <node concept="3clFbH" id="3qyYjZ1xaGt" role="3cqZAp" />
+        <node concept="3clFbH" id="1SDXsyHzKno" role="3cqZAp" />
+        <node concept="3clFbH" id="1SDXsyHzKSQ" role="3cqZAp" />
+        <node concept="3clFbH" id="1SDXsyHzLql" role="3cqZAp" />
+        <node concept="3SKdUt" id="1SDXsyHzMvz" role="3cqZAp">
+          <node concept="3SKdUq" id="1SDXsyHzMv_" role="3SKWNk">
+            <property role="3SKdUp" value="testing stuff" />
+          </node>
+        </node>
+        <node concept="3clFbF" id="1SDXsyHzNIi" role="3cqZAp">
+          <node concept="37vLTI" id="1SDXsyHzNIj" role="3clFbG">
+            <node concept="2OqwBi" id="1SDXsyHzNIk" role="37vLTx">
+              <node concept="37vLTw" id="1SDXsyHzNIl" role="2Oq$k0">
+                <ref role="3cqZAo" node="7r6PTxtZyHH" resolve="eventBus" />
+              </node>
+              <node concept="liA8E" id="1SDXsyHzNIm" role="2OqNvi">
+                <ref role="37wK5l" to="jr46:~EventBus.consumer(java.lang.String,io.vertx.core.Handler):io.vertx.core.eventbus.MessageConsumer" resolve="consumer" />
+                <node concept="Xl_RD" id="1SDXsyHzNIn" role="37wK5m">
+                  <property role="Xl_RC" value="keyer" />
+                </node>
+                <node concept="2ShNRf" id="1SDXsyHzNIo" role="37wK5m">
+                  <node concept="YeOm9" id="1SDXsyHzNIp" role="2ShVmc">
+                    <node concept="1Y3b0j" id="1SDXsyHzNIq" role="YeSDq">
+                      <property role="2bfB8j" value="true" />
+                      <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                      <ref role="1Y3XeK" to="sv4e:~Handler" resolve="Handler" />
+                      <node concept="3Tm1VV" id="1SDXsyHzNIr" role="1B3o_S" />
+                      <node concept="3clFb_" id="1SDXsyHzNIs" role="jymVt">
+                        <property role="1EzhhJ" value="false" />
+                        <property role="TrG5h" value="handle" />
+                        <property role="DiZV1" value="false" />
+                        <property role="od$2w" value="false" />
+                        <node concept="3Tm1VV" id="1SDXsyHzNIt" role="1B3o_S" />
+                        <node concept="3cqZAl" id="1SDXsyHzNIu" role="3clF45" />
+                        <node concept="37vLTG" id="1SDXsyHzNIv" role="3clF46">
+                          <property role="TrG5h" value="msg" />
+                          <node concept="3uibUv" id="1SDXsyHzNIw" role="1tU5fm">
+                            <ref role="3uigEE" to="jr46:~Message" resolve="Message" />
+                            <node concept="3uibUv" id="1SDXsyHzNIx" role="11_B2D">
+                              <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbS" id="1SDXsyHzNIy" role="3clF47">
+                          <node concept="3cpWs8" id="1SDXsyHzNIz" role="3cqZAp">
+                            <node concept="3cpWsn" id="1SDXsyHzNI$" role="3cpWs9">
+                              <property role="TrG5h" value="object" />
+                              <node concept="3uibUv" id="1SDXsyHzNI_" role="1tU5fm">
+                                <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
+                              </node>
+                              <node concept="2OqwBi" id="1SDXsyHzNIA" role="33vP2m">
+                                <node concept="37vLTw" id="1SDXsyHzNIB" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="1SDXsyHzNIv" resolve="msg" />
+                                </node>
+                                <node concept="liA8E" id="1SDXsyHzNIC" role="2OqNvi">
+                                  <ref role="37wK5l" to="jr46:~Message.body():java.lang.Object" resolve="body" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbF" id="1YUU7GW4Dly" role="3cqZAp">
+                            <node concept="1rXfSq" id="1YUU7GW4Dlw" role="3clFbG">
+                              <ref role="37wK5l" node="1PUq9fjdQlu" resolve="ld" />
+                              <node concept="3cpWs3" id="1YUU7GW4DxF" role="37wK5m">
+                                <node concept="Xl_RD" id="1YUU7GW4Dzf" role="3uHU7B">
+                                  <property role="Xl_RC" value="DemiKeyer.keyerConsumer recv:" />
+                                </node>
+                                <node concept="2OqwBi" id="3qyYjZ1x19B" role="3uHU7w">
+                                  <node concept="37vLTw" id="3qyYjZ1x16Q" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="1SDXsyHzNI$" resolve="object" />
+                                  </node>
+                                  <node concept="liA8E" id="3qyYjZ1x1cC" role="2OqNvi">
+                                    <ref role="37wK5l" to="r9e0:~JsonObject.encodePrettily():java.lang.String" resolve="encodePrettily" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3uibUv" id="1SDXsyHzNID" role="2Ghqu4">
+                        <ref role="3uigEE" to="jr46:~Message" resolve="Message" />
+                        <node concept="3uibUv" id="1SDXsyHzNIE" role="11_B2D">
+                          <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3uibUv" id="1SDXsyHzNIF" role="3PaCim">
+                  <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
+                </node>
+              </node>
+            </node>
+            <node concept="37vLTw" id="1SDXsyHzNIG" role="37vLTJ">
+              <ref role="3cqZAo" node="1SDXsyHzRTQ" resolve="keyerConsumer" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1SDXsyHzNIH" role="3cqZAp" />
+        <node concept="3clFbF" id="1SDXsyHzNII" role="3cqZAp">
+          <node concept="2OqwBi" id="1SDXsyHzNIL" role="3clFbG">
+            <node concept="37vLTw" id="1SDXsyHzNIM" role="2Oq$k0">
+              <ref role="3cqZAo" to="sv4e:~AbstractVerticle.vertx" resolve="vertx" />
+            </node>
+            <node concept="liA8E" id="1SDXsyHzNIN" role="2OqNvi">
+              <ref role="37wK5l" to="sv4e:~Vertx.setPeriodic(long,io.vertx.core.Handler):long" resolve="setPeriodic" />
+              <node concept="3cmrfG" id="3qyYjZ1x55D" role="37wK5m">
+                <property role="3cmrfH" value="30000" />
+              </node>
+              <node concept="2ShNRf" id="3qyYjZ1x5kf" role="37wK5m">
+                <node concept="YeOm9" id="3qyYjZ1x5_f" role="2ShVmc">
+                  <node concept="1Y3b0j" id="3qyYjZ1x5_i" role="YeSDq">
+                    <property role="2bfB8j" value="true" />
+                    <ref role="1Y3XeK" to="sv4e:~Handler" resolve="Handler" />
+                    <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                    <node concept="3Tm1VV" id="3qyYjZ1x5_j" role="1B3o_S" />
+                    <node concept="3clFb_" id="3qyYjZ1x5_k" role="jymVt">
+                      <property role="1EzhhJ" value="false" />
+                      <property role="TrG5h" value="handle" />
+                      <property role="DiZV1" value="false" />
+                      <property role="od$2w" value="false" />
+                      <node concept="3Tm1VV" id="3qyYjZ1x5_l" role="1B3o_S" />
+                      <node concept="3cqZAl" id="3qyYjZ1x5_n" role="3clF45" />
+                      <node concept="37vLTG" id="3qyYjZ1x5_o" role="3clF46">
+                        <property role="TrG5h" value="p0" />
+                        <node concept="3uibUv" id="3qyYjZ1x5_F" role="1tU5fm">
+                          <ref role="3uigEE" to="wyt6:~Long" resolve="Long" />
+                        </node>
+                      </node>
+                      <node concept="3clFbS" id="3qyYjZ1x5_q" role="3clF47">
+                        <node concept="3cpWs8" id="3qyYjZ1x5Uu" role="3cqZAp">
+                          <node concept="3cpWsn" id="3qyYjZ1x5Uv" role="3cpWs9">
+                            <property role="TrG5h" value="object" />
+                            <node concept="3uibUv" id="3qyYjZ1x5Uw" role="1tU5fm">
+                              <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
+                            </node>
+                            <node concept="2ShNRf" id="3iJaUC7ms1I" role="33vP2m">
+                              <node concept="1pGfFk" id="3iJaUC7mupH" role="2ShVmc">
+                                <ref role="37wK5l" to="r9e0:~JsonObject.&lt;init&gt;()" resolve="JsonObject" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="1SDXsyHcHQ$" role="3cqZAp">
+                          <node concept="2OqwBi" id="1SDXsyHcHY5" role="3clFbG">
+                            <node concept="37vLTw" id="1SDXsyHcHQy" role="2Oq$k0">
+                              <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
+                            </node>
+                            <node concept="liA8E" id="1SDXsyHcI6w" role="2OqNvi">
+                              <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                              <node concept="Xl_RD" id="1SDXsyHcI7A" role="37wK5m">
+                                <property role="Xl_RC" value="type" />
+                              </node>
+                              <node concept="Xl_RD" id="1SDXsyHcIi5" role="37wK5m">
+                                <property role="Xl_RC" value="keyer" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="3iJaUC7muv2" role="3cqZAp">
+                          <node concept="2OqwBi" id="3iJaUC7muxX" role="3clFbG">
+                            <node concept="37vLTw" id="3iJaUC7muv0" role="2Oq$k0">
+                              <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
+                            </node>
+                            <node concept="liA8E" id="3iJaUC7muBX" role="2OqNvi">
+                              <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                              <node concept="Xl_RD" id="3iJaUC7muCs" role="37wK5m">
+                                <property role="Xl_RC" value="userId" />
+                              </node>
+                              <node concept="Xl_RD" id="3iJaUC7muGT" role="37wK5m">
+                                <property role="Xl_RC" value="5" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="3iJaUC7muOu" role="3cqZAp">
+                          <node concept="2OqwBi" id="3iJaUC7muOv" role="3clFbG">
+                            <node concept="37vLTw" id="3iJaUC7muOw" role="2Oq$k0">
+                              <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
+                            </node>
+                            <node concept="liA8E" id="3iJaUC7muOx" role="2OqNvi">
+                              <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                              <node concept="Xl_RD" id="3iJaUC7muOy" role="37wK5m">
+                                <property role="Xl_RC" value="userName" />
+                              </node>
+                              <node concept="Xl_RD" id="3iJaUC7muOz" role="37wK5m">
+                                <property role="Xl_RC" value="Job" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="3iJaUC7mv0$" role="3cqZAp">
+                          <node concept="2OqwBi" id="3iJaUC7mv0_" role="3clFbG">
+                            <node concept="37vLTw" id="3iJaUC7mv0A" role="2Oq$k0">
+                              <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
+                            </node>
+                            <node concept="liA8E" id="3iJaUC7mv0B" role="2OqNvi">
+                              <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                              <node concept="Xl_RD" id="3iJaUC7mv0C" role="37wK5m">
+                                <property role="Xl_RC" value="message" />
+                              </node>
+                              <node concept="3cpWs3" id="3iJaUC7mvhI" role="37wK5m">
+                                <node concept="37vLTw" id="3iJaUC7mvln" role="3uHU7w">
+                                  <ref role="3cqZAo" node="3qyYjZ1x5_o" resolve="p0" />
+                                </node>
+                                <node concept="Xl_RD" id="3iJaUC7mv0D" role="3uHU7B">
+                                  <property role="Xl_RC" value="This is a message from job async " />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="3iJaUC7mvoh" role="3cqZAp">
+                          <node concept="2OqwBi" id="3iJaUC7mvtO" role="3clFbG">
+                            <node concept="37vLTw" id="3iJaUC7mvof" role="2Oq$k0">
+                              <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
+                            </node>
+                            <node concept="liA8E" id="3iJaUC7mvzr" role="2OqNvi">
+                              <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Double):io.vertx.core.json.JsonObject" resolve="put" />
+                              <node concept="Xl_RD" id="3iJaUC7mv$x" role="37wK5m">
+                                <property role="Xl_RC" value="timestamp" />
+                              </node>
+                              <node concept="2YIFZM" id="3iJaUC7mvLh" role="37wK5m">
+                                <ref role="1Pybhc" to="wyt6:~System" resolve="System" />
+                                <ref role="37wK5l" to="wyt6:~System.currentTimeMillis():long" resolve="currentTimeMillis" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbH" id="1SDXsyHxFPL" role="3cqZAp" />
+                        <node concept="3clFbF" id="3qyYjZ1x5JP" role="3cqZAp">
+                          <node concept="2OqwBi" id="3qyYjZ1x5KV" role="3clFbG">
+                            <node concept="37vLTw" id="3qyYjZ1x5JO" role="2Oq$k0">
+                              <ref role="3cqZAo" node="7r6PTxtZyHH" resolve="eventBus" />
+                            </node>
+                            <node concept="liA8E" id="3qyYjZ1x5N1" role="2OqNvi">
+                              <ref role="37wK5l" to="jr46:~EventBus.publish(java.lang.String,java.lang.Object):io.vertx.core.eventbus.EventBus" resolve="publish" />
+                              <node concept="Xl_RD" id="3qyYjZ1x5Oa" role="37wK5m">
+                                <property role="Xl_RC" value="keyer" />
+                              </node>
+                              <node concept="37vLTw" id="3qyYjZ1x6RH" role="37wK5m">
+                                <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3uibUv" id="3qyYjZ1x5_E" role="2Ghqu4">
+                      <ref role="3uigEE" to="wyt6:~Long" resolve="Long" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1SDXsyHzN9t" role="3cqZAp" />
+        <node concept="3clFbH" id="1SDXsyHzLzI" role="3cqZAp" />
+        <node concept="3clFbH" id="1SDXsyHzLCs" role="3cqZAp" />
       </node>
       <node concept="2AHcQZ" id="1PUq9fjdPX2" role="2AJF6D">
         <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
