@@ -7,19 +7,19 @@
     <modelRoot contentPath="/Users/danielstieger/stuff/centrix/jars" type="java_classes">
       <sourceRoot location="vertx-bridge-common-3.5.3.jar" />
       <sourceRoot location="vertx-core-3.5.3.jar" />
-      <sourceRoot location="vertx-tcp-eventbus-bridge-3.5.3.jar" />
       <sourceRoot location="vertx-web-3.5.3.jar" />
       <sourceRoot location="log4j.jar" />
       <sourceRoot location="joda-time-2.10.jar" />
+      <sourceRoot location="vertx-tcp-eventbus-bridge-3.6.0.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-bridge-common-3.5.3.jar" />
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-core-3.5.3.jar" />
-    <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-tcp-eventbus-bridge-3.5.3.jar" />
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-web-3.5.3.jar" />
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/log4j.jar" />
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/joda-time-2.10.jar" />
+    <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-tcp-eventbus-bridge-3.6.0.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
