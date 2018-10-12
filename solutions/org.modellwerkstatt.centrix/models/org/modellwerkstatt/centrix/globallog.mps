@@ -363,52 +363,63 @@
             <node concept="3uibUv" id="1YUU7GVUEzz" role="1tU5fm">
               <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
             </node>
-            <node concept="2OqwBi" id="1xk$udu5XCk" role="33vP2m">
-              <node concept="2OqwBi" id="1YUU7GVUIpq" role="2Oq$k0">
-                <node concept="2OqwBi" id="1YUU7GVUGZM" role="2Oq$k0">
-                  <node concept="2OqwBi" id="1YUU7GVUEWs" role="2Oq$k0">
-                    <node concept="2ShNRf" id="1YUU7GVUEUN" role="2Oq$k0">
-                      <node concept="1pGfFk" id="1YUU7GVUEUM" role="2ShVmc">
-                        <ref role="37wK5l" to="r9e0:~JsonObject.&lt;init&gt;()" resolve="JsonObject" />
+            <node concept="2OqwBi" id="1xk$uduadCP" role="33vP2m">
+              <node concept="2OqwBi" id="1xk$udu5XCk" role="2Oq$k0">
+                <node concept="2OqwBi" id="1YUU7GVUIpq" role="2Oq$k0">
+                  <node concept="2OqwBi" id="1YUU7GVUGZM" role="2Oq$k0">
+                    <node concept="2OqwBi" id="1YUU7GVUEWs" role="2Oq$k0">
+                      <node concept="2ShNRf" id="1YUU7GVUEUN" role="2Oq$k0">
+                        <node concept="1pGfFk" id="1YUU7GVUEUM" role="2ShVmc">
+                          <ref role="37wK5l" to="r9e0:~JsonObject.&lt;init&gt;()" resolve="JsonObject" />
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="1YUU7GVUF0j" role="2OqNvi">
+                        <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Float):io.vertx.core.json.JsonObject" resolve="put" />
+                        <node concept="Xl_RD" id="1YUU7GVUGl9" role="37wK5m">
+                          <property role="Xl_RC" value="globallog.sock-port" />
+                        </node>
+                        <node concept="3cmrfG" id="1YUU7GVUG$y" role="37wK5m">
+                          <property role="3cmrfH" value="8088" />
+                        </node>
                       </node>
                     </node>
-                    <node concept="liA8E" id="1YUU7GVUF0j" role="2OqNvi">
-                      <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Float):io.vertx.core.json.JsonObject" resolve="put" />
-                      <node concept="Xl_RD" id="1YUU7GVUGl9" role="37wK5m">
-                        <property role="Xl_RC" value="globallog.sock-port" />
+                    <node concept="liA8E" id="1YUU7GVUHkX" role="2OqNvi">
+                      <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Integer):io.vertx.core.json.JsonObject" resolve="put" />
+                      <node concept="Xl_RD" id="1YUU7GVUHnj" role="37wK5m">
+                        <property role="Xl_RC" value="globallog.tcp-port" />
                       </node>
-                      <node concept="3cmrfG" id="1YUU7GVUG$y" role="37wK5m">
-                        <property role="3cmrfH" value="8088" />
+                      <node concept="3cmrfG" id="1YUU7GVULuD" role="37wK5m">
+                        <property role="3cmrfH" value="8089" />
                       </node>
                     </node>
                   </node>
-                  <node concept="liA8E" id="1YUU7GVUHkX" role="2OqNvi">
-                    <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Integer):io.vertx.core.json.JsonObject" resolve="put" />
-                    <node concept="Xl_RD" id="1YUU7GVUHnj" role="37wK5m">
-                      <property role="Xl_RC" value="globallog.tcp-port" />
+                  <node concept="liA8E" id="1YUU7GVUIHk" role="2OqNvi">
+                    <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                    <node concept="Xl_RD" id="1YUU7GVUIK9" role="37wK5m">
+                      <property role="Xl_RC" value="sock.cors-pattern" />
                     </node>
-                    <node concept="3cmrfG" id="1YUU7GVULuD" role="37wK5m">
-                      <property role="3cmrfH" value="8089" />
+                    <node concept="Xl_RD" id="1YUU7GVUJw4" role="37wK5m">
+                      <property role="Xl_RC" value="http://localhost:8081/*" />
                     </node>
                   </node>
                 </node>
-                <node concept="liA8E" id="1YUU7GVUIHk" role="2OqNvi">
-                  <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
-                  <node concept="Xl_RD" id="1YUU7GVUIK9" role="37wK5m">
-                    <property role="Xl_RC" value="cors-pattern" />
+                <node concept="liA8E" id="1xk$udu5Yb0" role="2OqNvi">
+                  <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Float):io.vertx.core.json.JsonObject" resolve="put" />
+                  <node concept="Xl_RD" id="1xk$udu5Ylm" role="37wK5m">
+                    <property role="Xl_RC" value="webserver.tcp-port" />
                   </node>
-                  <node concept="Xl_RD" id="1YUU7GVUJw4" role="37wK5m">
-                    <property role="Xl_RC" value="http://localhost:8081/*" />
+                  <node concept="3cmrfG" id="1xk$udu5ZEE" role="37wK5m">
+                    <property role="3cmrfH" value="8090" />
                   </node>
                 </node>
               </node>
-              <node concept="liA8E" id="1xk$udu5Yb0" role="2OqNvi">
-                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Float):io.vertx.core.json.JsonObject" resolve="put" />
-                <node concept="Xl_RD" id="1xk$udu5Ylm" role="37wK5m">
-                  <property role="Xl_RC" value="webserver.tcp-port" />
+              <node concept="liA8E" id="1xk$uduaedm" role="2OqNvi">
+                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                <node concept="Xl_RD" id="1xk$uduaedn" role="37wK5m">
+                  <property role="Xl_RC" value="webserver.cors-pattern" />
                 </node>
-                <node concept="3cmrfG" id="1xk$udu5ZEE" role="37wK5m">
-                  <property role="3cmrfH" value="8089" />
+                <node concept="Xl_RD" id="1xk$uduaedo" role="37wK5m">
+                  <property role="Xl_RC" value="http://localhost:8080/*" />
                 </node>
               </node>
             </node>
@@ -588,7 +599,7 @@
                                     <node concept="liA8E" id="1YUU7GVUWCv" role="2OqNvi">
                                       <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
                                       <node concept="Xl_RD" id="1YUU7GVUWGJ" role="37wK5m">
-                                        <property role="Xl_RC" value="cors-pattern" />
+                                        <property role="Xl_RC" value="sock.cors-pattern" />
                                       </node>
                                     </node>
                                   </node>
@@ -663,27 +674,21 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="1Nw4HruMcDC" role="3cqZAp">
-          <node concept="2OqwBi" id="1Nw4HruMcDD" role="3clFbG">
-            <node concept="10M0yZ" id="1Nw4HruMcDE" role="2Oq$k0">
-              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-            </node>
-            <node concept="liA8E" id="1Nw4HruMcDF" role="2OqNvi">
-              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
-              <node concept="3cpWs3" id="1Nw4HruMcDG" role="37wK5m">
-                <node concept="Xl_RD" id="1Nw4HruMcDH" role="3uHU7B">
-                  <property role="Xl_RC" value="Cors-pattern is " />
+        <node concept="3clFbF" id="1xk$uduau_H" role="3cqZAp">
+          <node concept="1rXfSq" id="1xk$uduau_F" role="3clFbG">
+            <ref role="37wK5l" node="1PUq9fjdQlu" resolve="ld" />
+            <node concept="3cpWs3" id="1Nw4HruMcDG" role="37wK5m">
+              <node concept="Xl_RD" id="1Nw4HruMcDH" role="3uHU7B">
+                <property role="Xl_RC" value="sock.cors-pattern is " />
+              </node>
+              <node concept="2OqwBi" id="1Nw4HruMgF0" role="3uHU7w">
+                <node concept="37vLTw" id="1Nw4HruMgF1" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
                 </node>
-                <node concept="2OqwBi" id="1Nw4HruMgF0" role="3uHU7w">
-                  <node concept="37vLTw" id="1Nw4HruMgF1" role="2Oq$k0">
-                    <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
-                  </node>
-                  <node concept="liA8E" id="1Nw4HruMgF2" role="2OqNvi">
-                    <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
-                    <node concept="Xl_RD" id="1Nw4HruMgF3" role="37wK5m">
-                      <property role="Xl_RC" value="cors-pattern" />
-                    </node>
+                <node concept="liA8E" id="1Nw4HruMgF2" role="2OqNvi">
+                  <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
+                  <node concept="Xl_RD" id="1Nw4HruMgF3" role="37wK5m">
+                    <property role="Xl_RC" value="sock.cors-pattern" />
                   </node>
                 </node>
               </node>
@@ -792,7 +797,7 @@
             <ref role="37wK5l" node="1PUq9fjdQlu" resolve="ld" />
             <node concept="3cpWs3" id="1Nw4HruM9z_" role="37wK5m">
               <node concept="Xl_RD" id="1Nw4HruM9zA" role="3uHU7B">
-                <property role="Xl_RC" value="Web-Socket listening on " />
+                <property role="Xl_RC" value="globallog.sock-port listening on " />
               </node>
               <node concept="2OqwBi" id="1Nw4HruMb6X" role="3uHU7w">
                 <node concept="37vLTw" id="1Nw4HruMb6Y" role="2Oq$k0">
@@ -1087,7 +1092,7 @@
             <ref role="37wK5l" node="1PUq9fjdQlu" resolve="ld" />
             <node concept="3cpWs3" id="1Nw4HruM9cY" role="37wK5m">
               <node concept="Xl_RD" id="1Nw4HruM8Je" role="3uHU7B">
-                <property role="Xl_RC" value="TcpPridge listening on " />
+                <property role="Xl_RC" value="globallog.tcp-port listening on " />
               </node>
               <node concept="2OqwBi" id="1Nw4HruM9hO" role="3uHU7w">
                 <node concept="37vLTw" id="1Nw4HruM9hP" role="2Oq$k0">
@@ -2135,33 +2140,186 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="1xk$udu666_" role="3cqZAp">
-          <node concept="2OqwBi" id="1xk$udu675S" role="3clFbG">
-            <node concept="37vLTw" id="1xk$udu666z" role="2Oq$k0">
-              <ref role="3cqZAo" node="1xk$udu60SI" resolve="webServer" />
+        <node concept="3cpWs8" id="1xk$uduaoSp" role="3cqZAp">
+          <node concept="3cpWsn" id="1xk$uduaoSq" role="3cpWs9">
+            <property role="TrG5h" value="webServerRouter" />
+            <property role="3TUv4t" value="true" />
+            <node concept="3uibUv" id="1xk$uduaoSr" role="1tU5fm">
+              <ref role="3uigEE" to="oa7s:~Router" resolve="Router" />
             </node>
-            <node concept="liA8E" id="1xk$udu67Le" role="2OqNvi">
-              <ref role="37wK5l" to="q0a0:~HttpServer.requestHandler(io.vertx.core.Handler):io.vertx.core.http.HttpServer" resolve="requestHandler" />
+            <node concept="2YIFZM" id="1xk$uduaqer" role="33vP2m">
+              <ref role="37wK5l" to="oa7s:~Router.router(io.vertx.core.Vertx):io.vertx.ext.web.Router" resolve="router" />
+              <ref role="1Pybhc" to="oa7s:~Router" resolve="Router" />
+              <node concept="37vLTw" id="1xk$uduaqg0" role="37wK5m">
+                <ref role="3cqZAo" to="sv4e:~AbstractVerticle.vertx" resolve="vertx" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1xk$udubwic" role="3cqZAp" />
+        <node concept="3clFbF" id="1xk$uduazGC" role="3cqZAp">
+          <node concept="2OqwBi" id="1xk$uduazGD" role="3clFbG">
+            <node concept="2OqwBi" id="1xk$uduazGE" role="2Oq$k0">
+              <node concept="37vLTw" id="1xk$uduaJAr" role="2Oq$k0">
+                <ref role="3cqZAo" node="1xk$uduaoSq" resolve="webServerRouter" />
+              </node>
+              <node concept="liA8E" id="1xk$uduazGG" role="2OqNvi">
+                <ref role="37wK5l" to="oa7s:~Router.route():io.vertx.ext.web.Route" resolve="route" />
+              </node>
+            </node>
+            <node concept="liA8E" id="1xk$uduazGH" role="2OqNvi">
+              <ref role="37wK5l" to="oa7s:~Route.handler(io.vertx.core.Handler):io.vertx.ext.web.Route" resolve="handler" />
+              <node concept="2OqwBi" id="1xk$uduazGI" role="37wK5m">
+                <node concept="2OqwBi" id="1xk$uduazGJ" role="2Oq$k0">
+                  <node concept="2OqwBi" id="1xk$uduazGK" role="2Oq$k0">
+                    <node concept="2OqwBi" id="1xk$uduazGL" role="2Oq$k0">
+                      <node concept="2OqwBi" id="1xk$uduazGM" role="2Oq$k0">
+                        <node concept="2OqwBi" id="1xk$uduazGN" role="2Oq$k0">
+                          <node concept="2OqwBi" id="1xk$uduazGO" role="2Oq$k0">
+                            <node concept="2OqwBi" id="1xk$uduazGP" role="2Oq$k0">
+                              <node concept="2OqwBi" id="1xk$uduazGQ" role="2Oq$k0">
+                                <node concept="2YIFZM" id="1xk$uduazGR" role="2Oq$k0">
+                                  <ref role="1Pybhc" to="e8lw:~CorsHandler" resolve="CorsHandler" />
+                                  <ref role="37wK5l" to="e8lw:~CorsHandler.create(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="create" />
+                                  <node concept="2OqwBi" id="1xk$uduazGS" role="37wK5m">
+                                    <node concept="37vLTw" id="1xk$uduazGT" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
+                                    </node>
+                                    <node concept="liA8E" id="1xk$uduazGU" role="2OqNvi">
+                                      <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
+                                      <node concept="Xl_RD" id="1xk$uduaK9r" role="37wK5m">
+                                        <property role="Xl_RC" value="webserver.cors-pattern" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="liA8E" id="1xk$uduazGW" role="2OqNvi">
+                                  <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod):io.vertx.ext.web.handler.CorsHandler" resolve="allowedMethod" />
+                                  <node concept="Rm8GO" id="1xk$uduazGX" role="37wK5m">
+                                    <ref role="1Px2BO" to="q0a0:~HttpMethod" resolve="HttpMethod" />
+                                    <ref role="Rm8GQ" to="q0a0:~HttpMethod.GET" resolve="GET" />
+                                  </node>
+                                </node>
+                              </node>
+                              <node concept="liA8E" id="1xk$uduazGY" role="2OqNvi">
+                                <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod):io.vertx.ext.web.handler.CorsHandler" resolve="allowedMethod" />
+                                <node concept="Rm8GO" id="1xk$uduazGZ" role="37wK5m">
+                                  <ref role="Rm8GQ" to="q0a0:~HttpMethod.POST" resolve="POST" />
+                                  <ref role="1Px2BO" to="q0a0:~HttpMethod" resolve="HttpMethod" />
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="1xk$uduazH0" role="2OqNvi">
+                              <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod):io.vertx.ext.web.handler.CorsHandler" resolve="allowedMethod" />
+                              <node concept="Rm8GO" id="1xk$uduazH1" role="37wK5m">
+                                <ref role="1Px2BO" to="q0a0:~HttpMethod" resolve="HttpMethod" />
+                                <ref role="Rm8GQ" to="q0a0:~HttpMethod.PUT" resolve="PUT" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="1xk$uduazH2" role="2OqNvi">
+                            <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod):io.vertx.ext.web.handler.CorsHandler" resolve="allowedMethod" />
+                            <node concept="Rm8GO" id="1xk$uduazH3" role="37wK5m">
+                              <ref role="Rm8GQ" to="q0a0:~HttpMethod.OPTIONS" resolve="OPTIONS" />
+                              <ref role="1Px2BO" to="q0a0:~HttpMethod" resolve="HttpMethod" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="1xk$uduazH4" role="2OqNvi">
+                          <ref role="37wK5l" to="e8lw:~CorsHandler.allowCredentials(boolean):io.vertx.ext.web.handler.CorsHandler" resolve="allowCredentials" />
+                          <node concept="3clFbT" id="1xk$uduazH5" role="37wK5m">
+                            <property role="3clFbU" value="true" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="1xk$uduazH6" role="2OqNvi">
+                        <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="allowedHeader" />
+                        <node concept="Xl_RD" id="1xk$uduazH7" role="37wK5m">
+                          <property role="Xl_RC" value="Access-Control-Allow-Method" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="1xk$uduazH8" role="2OqNvi">
+                      <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="allowedHeader" />
+                      <node concept="Xl_RD" id="1xk$uduazH9" role="37wK5m">
+                        <property role="Xl_RC" value="Access-Control-Allow-Origin" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="1xk$uduazHa" role="2OqNvi">
+                    <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="allowedHeader" />
+                    <node concept="Xl_RD" id="1xk$uduazHb" role="37wK5m">
+                      <property role="Xl_RC" value="Access-Control-Allow-Credentials" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="1xk$uduazHc" role="2OqNvi">
+                  <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="allowedHeader" />
+                  <node concept="Xl_RD" id="1xk$uduazHd" role="37wK5m">
+                    <property role="Xl_RC" value="Content-Type" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="1xk$uduazHe" role="3cqZAp">
+          <node concept="1rXfSq" id="1xk$uduazHf" role="3clFbG">
+            <ref role="37wK5l" node="1PUq9fjdQlu" resolve="ld" />
+            <node concept="3cpWs3" id="1xk$uduazHg" role="37wK5m">
+              <node concept="Xl_RD" id="1xk$uduazHh" role="3uHU7B">
+                <property role="Xl_RC" value="webserver.cors-pattern is " />
+              </node>
+              <node concept="2OqwBi" id="1xk$uduazHi" role="3uHU7w">
+                <node concept="37vLTw" id="1xk$uduazHj" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
+                </node>
+                <node concept="liA8E" id="1xk$uduazHk" role="2OqNvi">
+                  <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
+                  <node concept="Xl_RD" id="1xk$uduaKfk" role="37wK5m">
+                    <property role="Xl_RC" value="webserver.cors-pattern" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1xk$uduazHm" role="3cqZAp" />
+        <node concept="3clFbF" id="1xk$uduazHn" role="3cqZAp">
+          <node concept="2OqwBi" id="1xk$uduazHo" role="3clFbG">
+            <node concept="2OqwBi" id="1xk$uduazHp" role="2Oq$k0">
+              <node concept="37vLTw" id="1xk$udubtpM" role="2Oq$k0">
+                <ref role="3cqZAo" node="1xk$uduaoSq" resolve="webServerRouter" />
+              </node>
+              <node concept="liA8E" id="1xk$uduazHr" role="2OqNvi">
+                <ref role="37wK5l" to="oa7s:~Router.route(java.lang.String):io.vertx.ext.web.Route" resolve="route" />
+                <node concept="Xl_RD" id="1xk$uduazHs" role="37wK5m">
+                  <property role="Xl_RC" value="/detaillog/*" />
+                </node>
+              </node>
+            </node>
+            <node concept="liA8E" id="1xk$uduazHt" role="2OqNvi">
+              <ref role="37wK5l" to="oa7s:~Route.handler(io.vertx.core.Handler):io.vertx.ext.web.Route" resolve="handler" />
               <node concept="2ShNRf" id="1xk$udu68fg" role="37wK5m">
                 <node concept="YeOm9" id="1xk$udu68fh" role="2ShVmc">
                   <node concept="1Y3b0j" id="1xk$udu68fi" role="YeSDq">
                     <property role="2bfB8j" value="true" />
-                    <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
                     <ref role="1Y3XeK" to="sv4e:~Handler" resolve="Handler" />
+                    <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
                     <node concept="3Tm1VV" id="1xk$udu68fj" role="1B3o_S" />
                     <node concept="3clFb_" id="1xk$udu68fk" role="jymVt">
                       <property role="1EzhhJ" value="false" />
                       <property role="TrG5h" value="handle" />
                       <property role="DiZV1" value="false" />
                       <property role="od$2w" value="false" />
-                      <node concept="3Tm1VV" id="1xk$udu68fl" role="1B3o_S" />
-                      <node concept="3cqZAl" id="1xk$udu68fm" role="3clF45" />
-                      <node concept="37vLTG" id="1xk$udu68fn" role="3clF46">
-                        <property role="TrG5h" value="req" />
-                        <node concept="3uibUv" id="1xk$udu68fo" role="1tU5fm">
-                          <ref role="3uigEE" to="q0a0:~HttpServerRequest" resolve="HttpServerRequest" />
+                      <node concept="37vLTG" id="1xk$udub99S" role="3clF46">
+                        <property role="TrG5h" value="ctxRouting" />
+                        <node concept="3uibUv" id="1xk$udub9sD" role="1tU5fm">
+                          <ref role="3uigEE" to="oa7s:~RoutingContext" resolve="RoutingContext" />
                         </node>
                       </node>
+                      <node concept="3Tm1VV" id="1xk$udu68fl" role="1B3o_S" />
+                      <node concept="3cqZAl" id="1xk$udu68fm" role="3clF45" />
                       <node concept="3clFbS" id="1xk$udu68fp" role="3clF47">
                         <node concept="3cpWs8" id="1xk$udu6d3F" role="3cqZAp">
                           <node concept="3cpWsn" id="1xk$udu6d3I" role="3cpWs9">
@@ -2172,7 +2330,23 @@
                             </node>
                           </node>
                         </node>
-                        <node concept="3clFbH" id="1xk$udu6d7w" role="3cqZAp" />
+                        <node concept="3cpWs8" id="1xk$udub2Va" role="3cqZAp">
+                          <node concept="3cpWsn" id="1xk$udub2Vb" role="3cpWs9">
+                            <property role="TrG5h" value="req" />
+                            <node concept="3uibUv" id="1xk$udub2Vc" role="1tU5fm">
+                              <ref role="3uigEE" to="q0a0:~HttpServerRequest" resolve="HttpServerRequest" />
+                            </node>
+                            <node concept="2OqwBi" id="1xk$uduba2L" role="33vP2m">
+                              <node concept="37vLTw" id="1xk$udub9NY" role="2Oq$k0">
+                                <ref role="3cqZAo" node="1xk$udub99S" resolve="ctxRouting" />
+                              </node>
+                              <node concept="liA8E" id="1xk$udubajA" role="2OqNvi">
+                                <ref role="37wK5l" to="oa7s:~RoutingContext.request():io.vertx.core.http.HttpServerRequest" resolve="request" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbH" id="1xk$udua599" role="3cqZAp" />
                         <node concept="3clFbJ" id="1xk$udu6fDd" role="3cqZAp">
                           <node concept="3clFbS" id="1xk$udu6fDf" role="3clFbx">
                             <node concept="3cpWs8" id="1xk$udu6hFL" role="3cqZAp">
@@ -2184,19 +2358,24 @@
                                 <node concept="2ShNRf" id="1xk$udu6hFO" role="33vP2m">
                                   <node concept="1pGfFk" id="1xk$udu6hFP" role="2ShVmc">
                                     <ref role="37wK5l" to="w08f:~DateTime.&lt;init&gt;(java.lang.Object)" resolve="DateTime" />
-                                    <node concept="2OqwBi" id="1xk$udu6kpw" role="37wK5m">
-                                      <node concept="2OqwBi" id="1xk$udu6hFQ" role="2Oq$k0">
-                                        <node concept="37vLTw" id="1xk$udu6k8o" role="2Oq$k0">
-                                          <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
-                                        </node>
-                                        <node concept="liA8E" id="1xk$udu6hFS" role="2OqNvi">
-                                          <ref role="37wK5l" to="q0a0:~HttpServerRequest.params():io.vertx.core.MultiMap" resolve="params" />
-                                        </node>
-                                      </node>
-                                      <node concept="liA8E" id="1xk$udu6kyY" role="2OqNvi">
-                                        <ref role="37wK5l" to="sv4e:~MultiMap.get(java.lang.String):java.lang.String" resolve="get" />
-                                        <node concept="Xl_RD" id="1xk$udu6hFT" role="37wK5m">
-                                          <property role="Xl_RC" value="millis" />
+                                    <node concept="2ShNRf" id="1xk$udu9Oog" role="37wK5m">
+                                      <node concept="1pGfFk" id="1xk$udu9Pxd" role="2ShVmc">
+                                        <ref role="37wK5l" to="wyt6:~Long.&lt;init&gt;(java.lang.String)" resolve="Long" />
+                                        <node concept="2OqwBi" id="1xk$udu6kpw" role="37wK5m">
+                                          <node concept="2OqwBi" id="1xk$udu6hFQ" role="2Oq$k0">
+                                            <node concept="37vLTw" id="1xk$udu6k8o" role="2Oq$k0">
+                                              <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
+                                            </node>
+                                            <node concept="liA8E" id="1xk$udu6hFS" role="2OqNvi">
+                                              <ref role="37wK5l" to="q0a0:~HttpServerRequest.params():io.vertx.core.MultiMap" resolve="params" />
+                                            </node>
+                                          </node>
+                                          <node concept="liA8E" id="1xk$udu6kyY" role="2OqNvi">
+                                            <ref role="37wK5l" to="sv4e:~MultiMap.get(java.lang.String):java.lang.String" resolve="get" />
+                                            <node concept="Xl_RD" id="1xk$udu6hFT" role="37wK5m">
+                                              <property role="Xl_RC" value="millis" />
+                                            </node>
+                                          </node>
                                         </node>
                                       </node>
                                     </node>
@@ -2218,7 +2397,7 @@
                                               <property role="Xl_RC" value=" - " />
                                             </node>
                                             <node concept="2OqwBi" id="1xk$udu6hGc" role="3uHU7B">
-                                              <node concept="37vLTw" id="1xk$udu6hGt" role="2Oq$k0">
+                                              <node concept="37vLTw" id="1xk$uduaN2J" role="2Oq$k0">
                                                 <ref role="3cqZAo" node="2T5SnS24sOh" resolve="DATETIMEFORMATTER" />
                                               </node>
                                               <node concept="liA8E" id="1xk$udu6hGd" role="2OqNvi">
@@ -2232,7 +2411,7 @@
                                           <node concept="2OqwBi" id="1xk$udu6l1K" role="3uHU7w">
                                             <node concept="2OqwBi" id="1xk$udu6l1L" role="2Oq$k0">
                                               <node concept="37vLTw" id="1xk$udu6l1M" role="2Oq$k0">
-                                                <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                                <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                               </node>
                                               <node concept="liA8E" id="1xk$udu6l1N" role="2OqNvi">
                                                 <ref role="37wK5l" to="q0a0:~HttpServerRequest.params():io.vertx.core.MultiMap" resolve="params" />
@@ -2253,7 +2432,7 @@
                                       <node concept="2OqwBi" id="1xk$udu6lg3" role="3uHU7w">
                                         <node concept="2OqwBi" id="1xk$udu6lg4" role="2Oq$k0">
                                           <node concept="37vLTw" id="1xk$udu6lg5" role="2Oq$k0">
-                                            <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                            <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                           </node>
                                           <node concept="liA8E" id="1xk$udu6lg6" role="2OqNvi">
                                             <ref role="37wK5l" to="q0a0:~HttpServerRequest.params():io.vertx.core.MultiMap" resolve="params" />
@@ -2274,7 +2453,7 @@
                                   <node concept="2OqwBi" id="1xk$udu6l_H" role="3uHU7w">
                                     <node concept="2OqwBi" id="1xk$udu6l_I" role="2Oq$k0">
                                       <node concept="37vLTw" id="1xk$udu6l_J" role="2Oq$k0">
-                                        <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                        <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                       </node>
                                       <node concept="liA8E" id="1xk$udu6l_K" role="2OqNvi">
                                         <ref role="37wK5l" to="q0a0:~HttpServerRequest.params():io.vertx.core.MultiMap" resolve="params" />
@@ -2317,14 +2496,17 @@
                               <node concept="2OqwBi" id="1xk$udu6mAc" role="3clFbG">
                                 <node concept="2OqwBi" id="1xk$udu6mqY" role="2Oq$k0">
                                   <node concept="37vLTw" id="1xk$udu6mkm" role="2Oq$k0">
-                                    <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                    <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                   </node>
                                   <node concept="liA8E" id="1xk$udu6m_h" role="2OqNvi">
                                     <ref role="37wK5l" to="q0a0:~HttpServerRequest.response():io.vertx.core.http.HttpServerResponse" resolve="response" />
                                   </node>
                                 </node>
-                                <node concept="liA8E" id="1xk$udu6mEX" role="2OqNvi">
-                                  <ref role="37wK5l" to="q0a0:~HttpServerResponse.close():void" resolve="close" />
+                                <node concept="liA8E" id="1xk$udu9Jwi" role="2OqNvi">
+                                  <ref role="37wK5l" to="q0a0:~HttpServerResponse.end(java.lang.String):void" resolve="end" />
+                                  <node concept="Xl_RD" id="1xk$udu9JwL" role="37wK5m">
+                                    <property role="Xl_RC" value="OK" />
+                                  </node>
                                 </node>
                               </node>
                             </node>
@@ -2333,7 +2515,7 @@
                             <node concept="2OqwBi" id="1xk$udu6jI2" role="3uHU7w">
                               <node concept="2OqwBi" id="1xk$udu6jwx" role="2Oq$k0">
                                 <node concept="37vLTw" id="1xk$udu6jsI" role="2Oq$k0">
-                                  <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                  <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                 </node>
                                 <node concept="liA8E" id="1xk$udu6jA3" role="2OqNvi">
                                   <ref role="37wK5l" to="q0a0:~HttpServerRequest.params():io.vertx.core.MultiMap" resolve="params" />
@@ -2351,7 +2533,7 @@
                                 <node concept="2OqwBi" id="1xk$udu6g3I" role="3uHU7B">
                                   <node concept="2OqwBi" id="1xk$udu6fMp" role="2Oq$k0">
                                     <node concept="37vLTw" id="1xk$udu6fIs" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                      <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                     </node>
                                     <node concept="liA8E" id="1xk$udu6gn9" role="2OqNvi">
                                       <ref role="37wK5l" to="q0a0:~HttpServerRequest.params():io.vertx.core.MultiMap" resolve="params" />
@@ -2367,7 +2549,7 @@
                                 <node concept="2OqwBi" id="1xk$udu6hiA" role="3uHU7w">
                                   <node concept="2OqwBi" id="1xk$udu6haN" role="2Oq$k0">
                                     <node concept="37vLTw" id="1xk$udu6h90" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                      <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                     </node>
                                     <node concept="liA8E" id="1xk$udu6hfe" role="2OqNvi">
                                       <ref role="37wK5l" to="q0a0:~HttpServerRequest.params():io.vertx.core.MultiMap" resolve="params" />
@@ -2384,7 +2566,7 @@
                               <node concept="2OqwBi" id="1xk$udu6iR_" role="3uHU7w">
                                 <node concept="2OqwBi" id="1xk$udu6iG0" role="2Oq$k0">
                                   <node concept="37vLTw" id="1xk$udu6iDd" role="2Oq$k0">
-                                    <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                    <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                   </node>
                                   <node concept="liA8E" id="1xk$udu6iNd" role="2OqNvi">
                                     <ref role="37wK5l" to="q0a0:~HttpServerRequest.params():io.vertx.core.MultiMap" resolve="params" />
@@ -2408,7 +2590,7 @@
                               <node concept="2OqwBi" id="1xk$udu6dp_" role="3clFbG">
                                 <node concept="2OqwBi" id="1xk$udu6dko" role="2Oq$k0">
                                   <node concept="37vLTw" id="1xk$udu6djS" role="2Oq$k0">
-                                    <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                    <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                   </node>
                                   <node concept="liA8E" id="1xk$udu6doE" role="2OqNvi">
                                     <ref role="37wK5l" to="q0a0:~HttpServerRequest.response():io.vertx.core.http.HttpServerResponse" resolve="response" />
@@ -2425,8 +2607,8 @@
                             <node concept="3clFbF" id="1xk$udu6dTq" role="3cqZAp">
                               <node concept="2OqwBi" id="1xk$udu6dTr" role="3clFbG">
                                 <node concept="2YIFZM" id="1xk$udu6dTs" role="2Oq$k0">
-                                  <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
                                   <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
+                                  <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
                                   <node concept="3VsKOn" id="1xk$udu6dTt" role="37wK5m">
                                     <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="GlobalLogger" />
                                   </node>
@@ -2437,7 +2619,7 @@
                                     <node concept="2OqwBi" id="1xk$udu6eGt" role="3uHU7w">
                                       <node concept="2OqwBi" id="1xk$udu6exm" role="2Oq$k0">
                                         <node concept="37vLTw" id="1xk$udu6euE" role="2Oq$k0">
-                                          <ref role="3cqZAo" node="1xk$udu68fn" resolve="req" />
+                                          <ref role="3cqZAo" node="1xk$udub2Vb" resolve="req" />
                                         </node>
                                         <node concept="liA8E" id="1xk$udu6eE4" role="2OqNvi">
                                           <ref role="37wK5l" to="q0a0:~HttpServerRequest.remoteAddress():io.vertx.core.net.SocketAddress" resolve="remoteAddress" />
@@ -2464,7 +2646,61 @@
                         </node>
                       </node>
                     </node>
-                    <node concept="3uibUv" id="1xk$udu68fv" role="2Ghqu4">
+                    <node concept="3uibUv" id="1xk$uduaQqm" role="2Ghqu4">
+                      <ref role="3uigEE" to="oa7s:~RoutingContext" resolve="RoutingContext" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1xk$uduayBp" role="3cqZAp" />
+        <node concept="3clFbH" id="1xk$uduamze" role="3cqZAp" />
+        <node concept="3clFbF" id="1xk$udu666_" role="3cqZAp">
+          <node concept="2OqwBi" id="1xk$udu675S" role="3clFbG">
+            <node concept="37vLTw" id="1xk$udu666z" role="2Oq$k0">
+              <ref role="3cqZAo" node="1xk$udu60SI" resolve="webServer" />
+            </node>
+            <node concept="liA8E" id="1xk$udu67Le" role="2OqNvi">
+              <ref role="37wK5l" to="q0a0:~HttpServer.requestHandler(io.vertx.core.Handler):io.vertx.core.http.HttpServer" resolve="requestHandler" />
+              <node concept="2ShNRf" id="1xk$udubivU" role="37wK5m">
+                <node concept="YeOm9" id="1xk$udubiH8" role="2ShVmc">
+                  <node concept="1Y3b0j" id="1xk$udubiHb" role="YeSDq">
+                    <property role="2bfB8j" value="true" />
+                    <ref role="1Y3XeK" to="sv4e:~Handler" resolve="Handler" />
+                    <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                    <node concept="3Tm1VV" id="1xk$udubiHc" role="1B3o_S" />
+                    <node concept="3clFb_" id="1xk$udubiHd" role="jymVt">
+                      <property role="1EzhhJ" value="false" />
+                      <property role="TrG5h" value="handle" />
+                      <property role="DiZV1" value="false" />
+                      <property role="od$2w" value="false" />
+                      <node concept="3Tm1VV" id="1xk$udubiHe" role="1B3o_S" />
+                      <node concept="3cqZAl" id="1xk$udubiHg" role="3clF45" />
+                      <node concept="37vLTG" id="1xk$udubiHh" role="3clF46">
+                        <property role="TrG5h" value="p0" />
+                        <node concept="3uibUv" id="1xk$udubiH$" role="1tU5fm">
+                          <ref role="3uigEE" to="q0a0:~HttpServerRequest" resolve="HttpServerRequest" />
+                        </node>
+                      </node>
+                      <node concept="3clFbS" id="1xk$udubiHj" role="3clF47">
+                        <node concept="3clFbF" id="1xk$udubiWj" role="3cqZAp">
+                          <node concept="2OqwBi" id="1xk$udubiX4" role="3clFbG">
+                            <node concept="37vLTw" id="1xk$udubiWi" role="2Oq$k0">
+                              <ref role="3cqZAo" node="1xk$uduaoSq" resolve="webServerRouter" />
+                            </node>
+                            <node concept="liA8E" id="1xk$udubjq$" role="2OqNvi">
+                              <ref role="37wK5l" to="oa7s:~Router.accept(io.vertx.core.http.HttpServerRequest):void" resolve="accept" />
+                              <node concept="37vLTw" id="1xk$udubjsm" role="37wK5m">
+                                <ref role="3cqZAo" node="1xk$udubiHh" resolve="p0" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3uibUv" id="1xk$udubiHz" role="2Ghqu4">
                       <ref role="3uigEE" to="q0a0:~HttpServerRequest" resolve="HttpServerRequest" />
                     </node>
                   </node>
@@ -2487,6 +2723,27 @@
                 <node concept="liA8E" id="1xk$udu6cuM" role="2OqNvi">
                   <ref role="37wK5l" to="r9e0:~JsonObject.getInteger(java.lang.String):java.lang.Integer" resolve="getInteger" />
                   <node concept="Xl_RD" id="1xk$udu6cEc" role="37wK5m">
+                    <property role="Xl_RC" value="webserver.tcp-port" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="1xk$udu7dd_" role="3cqZAp">
+          <node concept="1rXfSq" id="1xk$udu7ddA" role="3clFbG">
+            <ref role="37wK5l" node="1PUq9fjdQlu" resolve="ld" />
+            <node concept="3cpWs3" id="1xk$udu7ddB" role="37wK5m">
+              <node concept="Xl_RD" id="1xk$udu7ddC" role="3uHU7B">
+                <property role="Xl_RC" value="webserver.tcp-port listening on " />
+              </node>
+              <node concept="2OqwBi" id="1xk$udu7ddD" role="3uHU7w">
+                <node concept="37vLTw" id="1xk$udu7ddE" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1YUU7GVUPL5" resolve="config" />
+                </node>
+                <node concept="liA8E" id="1xk$udu7ddF" role="2OqNvi">
+                  <ref role="37wK5l" to="r9e0:~JsonObject.getInteger(java.lang.String):java.lang.Integer" resolve="getInteger" />
+                  <node concept="Xl_RD" id="1xk$udu7e_g" role="37wK5m">
                     <property role="Xl_RC" value="webserver.tcp-port" />
                   </node>
                 </node>
