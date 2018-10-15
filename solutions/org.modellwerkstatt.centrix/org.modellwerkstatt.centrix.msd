@@ -11,6 +11,7 @@
       <sourceRoot location="log4j.jar" />
       <sourceRoot location="joda-time-2.10.jar" />
       <sourceRoot location="vertx-tcp-eventbus-bridge-3.6.0.jar" />
+      <sourceRoot location="vertx-web-templ-pebble-3.5.3.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
@@ -20,6 +21,8 @@
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/log4j.jar" />
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/joda-time-2.10.jar" />
     <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-tcp-eventbus-bridge-3.6.0.jar" />
+    <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/vertx-web-templ-pebble-3.5.3.jar" />
+    <stubModelEntry path="/Users/danielstieger/stuff/centrix/jars/mopebble-3.0.4.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

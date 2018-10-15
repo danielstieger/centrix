@@ -57,6 +57,7 @@
                   excludes="META-INF/*.SF" />
     
       <fileset dir="./" includes="log4j.properties" />
+      <!-- <fileset dir="./templates" includes="**/*" /> -->
     </jar>
   </target>
   

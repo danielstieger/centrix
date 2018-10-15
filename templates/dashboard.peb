@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+	MPreis Internal MoWare Dashboard
+	Daniel Stieger, daniel.stieger@modellwerkstatt.org
+	
+	
+-->
+<html>
+	<head>
+		<title>MoWare Dashboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Start</a></li>
+							<li><a href="#one">Requests</a></li>
+							<li><a href="#two">Exceptions</a></li>
+							<li><a href="#three">Restarts</a></li>
+							<li><a href="#three">Duration</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>MoWare Dashboard</h1>
+							<p>Monitor all relevant data from moware applications and servers.</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">More</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Requests</h1>
+							<script type="text/javascript">
+							    google.charts.load("current", {packages:["corechart"]});
+							    google.charts.setOnLoadCallback(drawChart);
+							    function drawChart() {
+							      var data = google.visualization.arrayToDataTable([
+							        ["User", "Value", { role: "style" } ],
+							        {% for bar in requestGraph.data %}
+							        ["{{ bar.name }}", {{ bar.value }}, "#5e42a6"],
+									{% endfor %}
+							      ]);
+							
+							      var view = new google.visualization.DataView(data);
+							      view.setColumns([0, 1,
+							                       { calc: "stringify",
+							                         sourceColumn: 1,
+							                         type: "string",
+							                         role: "annotation" },
+							                       2]);
+							
+							      var options = {
+							        title: "{{ requestGraph.title }}",
+							        width: 800,
+							        height: 600,
+							        bar: {groupWidth: "95%"},
+							        legend: { position: "none" },
+							      };
+							      var chart = new google.visualization.BarChart(document.getElementById("{{ requestGraph.id }}"));
+							      chart.draw(view, options);
+							  }
+							</script>
+							<div id="{{ requestGraph.id }}" style="width: 1000px; height: 707px;"></div>
+						</div>
+					</section>
+					
+					
+					
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Modellwerkstatt.org</li><li><a href="http://www.modellwerkstatt.org">Modellwerkstatt</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
