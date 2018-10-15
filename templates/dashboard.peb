@@ -22,10 +22,10 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Start</a></li>
-							<li><a href="#one">Requests</a></li>
+							<li><a href="#one">Conclusions</a></li>
 							<li><a href="#two">Exceptions</a></li>
 							<li><a href="#three">Restarts</a></li>
-							<li><a href="#three">Duration</a></li>
+							<li><a href="#four">Duration</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -48,14 +48,14 @@
 				<!-- One -->
 					<section id="one" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<h1>Requests</h1>
+							<h1>Conclusions</h1>
 							<script type="text/javascript">
 							    google.charts.load("current", {packages:["corechart"]});
 							    google.charts.setOnLoadCallback(drawChart);
 							    function drawChart() {
 							      var data = google.visualization.arrayToDataTable([
 							        ["User", "Value", { role: "style" } ],
-							        {% for bar in requestGraph.data %}
+							        {% for bar in conclusionsGraph.data %}
 							        ["{{ bar.name }}", {{ bar.value }}, "#5e42a6"],
 									{% endfor %}
 							      ]);
@@ -69,21 +69,135 @@
 							                       2]);
 							
 							      var options = {
-							        title: "{{ requestGraph.title }}",
+							        title: "{{ conclusionsGraph.title }}",
 							        width: 800,
 							        height: 600,
 							        bar: {groupWidth: "95%"},
 							        legend: { position: "none" },
 							      };
-							      var chart = new google.visualization.BarChart(document.getElementById("{{ requestGraph.id }}"));
+							      var chart = new google.visualization.BarChart(document.getElementById("{{ conclusionsGraph.id }}"));
 							      chart.draw(view, options);
 							  }
 							</script>
-							<div id="{{ requestGraph.id }}" style="width: 1000px; height: 707px;"></div>
+							<div id="{{ conclusionsGraph.id }}" style="width: 1000px; height: 707px;"></div>
 						</div>
 					</section>
 					
-					
+					<!-- Two -->
+					<section id="two" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Exceptions</h1>
+							<script type="text/javascript">
+							    google.charts.load("current", {packages:["corechart"]});
+							    google.charts.setOnLoadCallback(drawChart);
+							    function drawChart() {
+							      var data = google.visualization.arrayToDataTable([
+							        ["User", "Value", { role: "style" } ],
+							        {% for bar in exceptionsGraph.data %}
+							        ["{{ bar.name }}", {{ bar.value }}, "#5e42a6"],
+									{% endfor %}
+							      ]);
+							
+							      var view = new google.visualization.DataView(data);
+							      view.setColumns([0, 1,
+							                       { calc: "stringify",
+							                         sourceColumn: 1,
+							                         type: "string",
+							                         role: "annotation" },
+							                       2]);
+							
+							      var options = {
+							        title: "{{ exceptionsGraph.title }}",
+							        width: 800,
+							        height: 600,
+							        bar: {groupWidth: "95%"},
+							        legend: { position: "none" },
+							      };
+							      var chart = new google.visualization.BarChart(document.getElementById("{{ exceptionsGraph.id }}"));
+							      chart.draw(view, options);
+							  }
+							</script>
+							<div id="{{ exceptionsGraph.id }}" style="width: 1000px; height: 707px;"></div>
+						</div>
+					</section>
+
+					<!-- Three -->
+					<section id="three" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>EB Restarts</h1>
+							<script type="text/javascript">
+							    google.charts.load("current", {packages:["corechart"]});
+							    google.charts.setOnLoadCallback(drawChart);
+							    function drawChart() {
+							      var data = google.visualization.arrayToDataTable([
+							        ["User", "Value", { role: "style" } ],
+							        {% for bar in ebRestarsGraph.data %}
+							        ["{{ bar.name }}", {{ bar.value }}, "#5e42a6"],
+									{% endfor %}
+							      ]);
+							
+							      var view = new google.visualization.DataView(data);
+							      view.setColumns([0, 1,
+							                       { calc: "stringify",
+							                         sourceColumn: 1,
+							                         type: "string",
+							                         role: "annotation" },
+							                       2]);
+							
+							      var options = {
+							        title: "{{ ebRestarsGraph.title }}",
+							        width: 800,
+							        height: 600,
+							        bar: {groupWidth: "95%"},
+							        legend: { position: "none" },
+							      };
+							      var chart = new google.visualization.BarChart(document.getElementById("{{ ebRestarsGraph.id }}"));
+							      chart.draw(view, options);
+							  }
+							</script>
+							<div id="{{ ebRestarsGraph.id }}" style="width: 1000px; height: 707px;"></div>
+						</div>
+					</section>
+			
+			    <!-- Four -->
+					<section id="four" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Command Durations > 2 sec.</h1>
+							<script type="text/javascript">
+							    google.charts.load("current", {packages:["corechart"]});
+							    google.charts.setOnLoadCallback(drawChart);
+							    function drawChart() {
+							      var data = google.visualization.arrayToDataTable([
+							        ["User", "Value", { role: "style" } ],
+							        {% for bar in durationGraph.data %}
+							        ["{{ bar.name }}", {{ bar.value }}, "#5e42a6"],
+									{% endfor %}
+							      ]);
+							
+							      var view = new google.visualization.DataView(data);
+							      view.setColumns([0, 1,
+							                       { calc: "stringify",
+							                         sourceColumn: 1,
+							                         type: "string",
+							                         role: "annotation" },
+							                       2]);
+							
+							      var options = {
+							        title: "{{ durationGraph.title }}",
+							        width: 800,
+							        height: 600,
+							        bar: {groupWidth: "95%"},
+							        legend: { position: "none" },
+							      };
+							      var chart = new google.visualization.BarChart(document.getElementById("{{ durationGraph.id }}"));
+							      chart.draw(view, options);
+							  }
+							</script>
+							<div id="{{ durationGraph.id }}" style="width: 1000px; height: 707px;"></div>
+						</div>
+					</section>
+
+
 					
 			</div>
 
