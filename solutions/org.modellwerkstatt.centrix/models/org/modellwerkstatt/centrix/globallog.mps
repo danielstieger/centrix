@@ -4589,6 +4589,39 @@
       </node>
       <node concept="3clFbS" id="6JPfgAzcX6k" role="3clF47">
         <node concept="3clFbH" id="6ic9U4dTXgA" role="3cqZAp" />
+        <node concept="3clFbF" id="5S2wSVVPCUQ" role="3cqZAp">
+          <node concept="2OqwBi" id="5S2wSVVPCUR" role="3clFbG">
+            <node concept="2YIFZM" id="5S2wSVVPCUS" role="2Oq$k0">
+              <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
+              <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
+              <node concept="3VsKOn" id="5S2wSVVPCUT" role="37wK5m">
+                <ref role="3VsUkX" node="6JPfgAzcVTt" resolve="DashboardService" />
+              </node>
+            </node>
+            <node concept="liA8E" id="5S2wSVVPCUU" role="2OqNvi">
+              <ref role="37wK5l" to="q7tw:~Category.error(java.lang.Object):void" resolve="error" />
+              <node concept="3cpWs3" id="5S2wSVVPEe_" role="37wK5m">
+                <node concept="2OqwBi" id="5S2wSVVPEug" role="3uHU7w">
+                  <node concept="2OqwBi" id="5S2wSVVPEjo" role="2Oq$k0">
+                    <node concept="37vLTw" id="5S2wSVVPEh3" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6JPfgAzcX6h" resolve="context" />
+                    </node>
+                    <node concept="liA8E" id="5S2wSVVPErO" role="2OqNvi">
+                      <ref role="37wK5l" to="oa7s:~RoutingContext.request():io.vertx.core.http.HttpServerRequest" resolve="request" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="5S2wSVVPEAU" role="2OqNvi">
+                    <ref role="37wK5l" to="q0a0:~HttpServerRequest.remoteAddress():io.vertx.core.net.SocketAddress" resolve="remoteAddress" />
+                  </node>
+                </node>
+                <node concept="Xl_RD" id="5S2wSVVPDZi" role="3uHU7B">
+                  <property role="Xl_RC" value="Request received, rendering page for client " />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5S2wSVVPBHN" role="3cqZAp" />
         <node concept="3clFbF" id="6ic9U4dTXum" role="3cqZAp">
           <node concept="1rXfSq" id="6ic9U4dTXuk" role="3clFbG">
             <ref role="37wK5l" node="6Cd6UaQfs5d" resolve="prepareDataForRendering" />
