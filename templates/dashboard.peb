@@ -26,6 +26,9 @@
 							<li><a href="#two">Exceptions</a></li>
 							<li><a href="#three">Restarts</a></li>
 							<li><a href="#four">Duration</a></li>
+							<li><a href="#five">Dirty Sessions</a></li>
+							<li><a href="#six">FX8 Key Events</a></li>
+							
 						</ul>
 					</nav>
 				</div>
@@ -71,7 +74,7 @@
 							      var options = {
 							        title: "{{ conclusionsGraph.title }}",
 							        width: 800,
-							        height: 600,
+							        height: 1300,
 							        bar: {groupWidth: "95%"},
 							        legend: { position: "none" },
 							      };
@@ -79,7 +82,7 @@
 							      chart.draw(view, options);
 							  }
 							</script>
-							<div id="{{ conclusionsGraph.id }}" style="width: 1000px; height: 707px;"></div>
+							<div id="{{ conclusionsGraph.id }}" style="width: 1000px; height: 1414px;"></div>
 						</div>
 					</section>
 					
@@ -197,6 +200,81 @@
 						</div>
 					</section>
 
+			 <!-- Five -->
+					<section id="five" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Commands generating a dirty session after inits</h1>
+							<script type="text/javascript">
+							    google.charts.load("current", {packages:["corechart"]});
+							    google.charts.setOnLoadCallback(drawChart);
+							    function drawChart() {
+							      var data = google.visualization.arrayToDataTable([
+							        ["User", "Value", { role: "style" } ],
+							        {% for bar in dirtySessionGraph.data %}
+							        ["{{ bar.name }}", {{ bar.value }}, "#5e42a6"],
+									{% endfor %}
+							      ]);
+							
+							      var view = new google.visualization.DataView(data);
+							      view.setColumns([0, 1,
+							                       { calc: "stringify",
+							                         sourceColumn: 1,
+							                         type: "string",
+							                         role: "annotation" },
+							                       2]);
+							
+							      var options = {
+							        title: "{{ dirtySessionGraph.title }}",
+							        width: 800,
+							        height: 600,
+							        bar: {groupWidth: "95%"},
+							        legend: { position: "none" },
+							      };
+							      var chart = new google.visualization.BarChart(document.getElementById("{{ dirtySessionGraph.id }}"));
+							      chart.draw(view, options);
+							  }
+							</script>
+							<div id="{{ dirtySessionGraph.id }}" style="width: 1000px; height: 707px;"></div>
+						</div>
+					</section>
+
+ 				<!-- Six -->
+					<section id="six" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>FX8 Key Events per user</h1>
+							<script type="text/javascript">
+							    google.charts.load("current", {packages:["corechart"]});
+							    google.charts.setOnLoadCallback(drawChart);
+							    function drawChart() {
+							      var data = google.visualization.arrayToDataTable([
+							        ["User", "Value", { role: "style" } ],
+							        {% for bar in keyEventGraph.data %}
+							        ["{{ bar.name }}", {{ bar.value }}, "#5e42a6"],
+									{% endfor %}
+							      ]);
+							
+							      var view = new google.visualization.DataView(data);
+							      view.setColumns([0, 1,
+							                       { calc: "stringify",
+							                         sourceColumn: 1,
+							                         type: "string",
+							                         role: "annotation" },
+							                       2]);
+							
+							      var options = {
+							        title: "{{ keyEventGraph.title }}",
+							        width: 800,
+							        height: 1300,
+							        bar: {groupWidth: "95%"},
+							        legend: { position: "none" },
+							      };
+							      var chart = new google.visualization.BarChart(document.getElementById("{{ keyEventGraph.id }}"));
+							      chart.draw(view, options);
+							  }
+							</script>
+							<div id="{{ keyEventGraph.id }}" style="width: 1000px; height: 1414px;"></div>
+						</div>
+					</section>
 
 					
 			</div>
