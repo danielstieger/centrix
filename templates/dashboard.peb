@@ -73,8 +73,11 @@
 							
 							      var options = {
 							        title: "{{ conclusionsGraph.title }}",
-							        width: 800,
-							        height: 1300,
+							        chartArea: {
+							        	width: 800,
+							        	height: 1300,
+							        },
+							        	
 							        bar: {groupWidth: "95%"},
 							        legend: { position: "none" },
 							      };
@@ -111,8 +114,10 @@
 							
 							      var options = {
 							        title: "{{ exceptionsGraph.title }}",
-							        width: 800,
-							        height: 600,
+							        charArea: {
+							        	width: 800,
+							        	height: 600,
+							        },
 							        bar: {groupWidth: "95%"},
 							        legend: { position: "none" },
 							      };
@@ -149,8 +154,10 @@
 							
 							      var options = {
 							        title: "{{ ebRestarsGraph.title }}",
-							        width: 800,
-							        height: 600,
+							        charArea: {
+							        	width: 800,
+							        	height: 600,
+							        },
 							        bar: {groupWidth: "95%"},
 							        legend: { position: "none" },
 							      };
@@ -187,8 +194,10 @@
 							
 							      var options = {
 							        title: "{{ durationGraph.title }}",
-							        width: 800,
-							        height: 600,
+							     	charArea: {
+							        	width: 800,
+							        	height: 600,
+							        },
 							        bar: {groupWidth: "95%"},
 							        legend: { position: "none" },
 							      };
@@ -225,8 +234,10 @@
 							
 							      var options = {
 							        title: "{{ dirtySessionGraph.title }}",
-							        width: 800,
-							        height: 600,
+							        charArea: {
+							        	width: 800,
+							        	height: 600,
+							        },
 							        bar: {groupWidth: "95%"},
 							        legend: { position: "none" },
 							      };
@@ -263,8 +274,10 @@
 							
 							      var options = {
 							        title: "{{ keyEventGraph.title }}",
-							        width: 800,
-							        height: 1300,
+							        chartArea: {
+							        	width: 800,
+							        	height: 1300,
+							        	},
 							        bar: {groupWidth: "95%"},
 							        legend: { position: "none" },
 							      };

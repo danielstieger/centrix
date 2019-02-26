@@ -4541,7 +4541,7 @@
             <node concept="liA8E" id="6ic9U4dTY5j" role="2OqNvi">
               <ref role="37wK5l" node="6Cd6UaQf8Cd" resolve="sortWithMaxBars" />
               <node concept="3cmrfG" id="6ic9U4dTY8m" role="37wK5m">
-                <property role="3cmrfH" value="30" />
+                <property role="3cmrfH" value="50" />
               </node>
             </node>
           </node>
@@ -4851,7 +4851,6 @@
           </node>
         </node>
         <node concept="3clFbH" id="3Uk8AE4W43r" role="3cqZAp" />
-        <node concept="3clFbH" id="5PYMpo00gCv" role="3cqZAp" />
         <node concept="3cpWs8" id="5PYMpo00gHa" role="3cqZAp">
           <node concept="3cpWsn" id="5PYMpo00gHb" role="3cpWs9">
             <property role="TrG5h" value="fx8KeyEventGraph" />
@@ -4901,8 +4900,8 @@
             </node>
             <node concept="liA8E" id="5PYMpo00gHA" role="2OqNvi">
               <ref role="37wK5l" node="6Cd6UaQf8Cd" resolve="sortWithMaxBars" />
-              <node concept="3cmrfG" id="5PYMpo00gHB" role="37wK5m">
-                <property role="3cmrfH" value="30" />
+              <node concept="3cmrfG" id="3OfvFtlCu0p" role="37wK5m">
+                <property role="3cmrfH" value="50" />
               </node>
             </node>
           </node>
