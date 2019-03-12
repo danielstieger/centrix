@@ -29,6 +29,7 @@
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
         <child id="1082485599096" name="statements" index="9aQI4" />
       </concept>
@@ -2688,144 +2689,342 @@
                             </node>
                           </node>
                           <node concept="3clFbH" id="7lZUamR553d" role="3cqZAp" />
-                          <node concept="3clFbJ" id="7lZUamR553e" role="3cqZAp">
-                            <node concept="3clFbS" id="7lZUamR553f" role="3clFbx">
-                              <node concept="3cpWs8" id="7lZUamR56D1" role="3cqZAp">
-                                <node concept="3cpWsn" id="7lZUamR56D4" role="3cpWs9">
-                                  <property role="TrG5h" value="lockName" />
-                                  <node concept="17QB3L" id="7lZUamR56CZ" role="1tU5fm" />
-                                  <node concept="2OqwBi" id="7lZUamR56GT" role="33vP2m">
-                                    <node concept="2OqwBi" id="7lZUamR562Q" role="2Oq$k0">
-                                      <node concept="37vLTw" id="7lZUamR55ZO" role="2Oq$k0">
-                                        <ref role="3cqZAo" node="7lZUamR5538" resolve="obj" />
-                                      </node>
-                                      <node concept="liA8E" id="7lZUamR565R" role="2OqNvi">
-                                        <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
-                                        <node concept="Xl_RD" id="7lZUamR569u" role="37wK5m">
-                                          <property role="Xl_RC" value="lockname" />
-                                        </node>
-                                      </node>
-                                    </node>
-                                    <node concept="liA8E" id="7lZUamR56L1" role="2OqNvi">
-                                      <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
-                                    </node>
-                                  </node>
-                                </node>
-                              </node>
-                              <node concept="3clFbH" id="7lZUamR56Mb" role="3cqZAp" />
-                              <node concept="3clFbF" id="7lZUamR58a5" role="3cqZAp">
-                                <node concept="2OqwBi" id="7lZUamR58jZ" role="3clFbG">
-                                  <node concept="2YIFZM" id="7lZUamR58a7" role="2Oq$k0">
+                          <node concept="3clFbH" id="7lZUamRiq1S" role="3cqZAp" />
+                          <node concept="3clFbJ" id="7lZUamRitqU" role="3cqZAp">
+                            <node concept="3clFbS" id="7lZUamRitqW" role="3clFbx">
+                              <node concept="3clFbF" id="7lZUamRiuYq" role="3cqZAp">
+                                <node concept="2OqwBi" id="7lZUamRiuYr" role="3clFbG">
+                                  <node concept="2YIFZM" id="7lZUamRiuYs" role="2Oq$k0">
                                     <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
                                     <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
-                                    <node concept="3VsKOn" id="7lZUamR58a8" role="37wK5m">
+                                    <node concept="3VsKOn" id="7lZUamRiuYt" role="37wK5m">
                                       <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="GlobalLogger" />
                                     </node>
                                   </node>
-                                  <node concept="liA8E" id="7lZUamR58qt" role="2OqNvi">
+                                  <node concept="liA8E" id="7lZUamRiuYu" role="2OqNvi">
                                     <ref role="37wK5l" to="q7tw:~Category.error(java.lang.Object):void" resolve="error" />
-                                    <node concept="3cpWs3" id="7lZUamR58Gd" role="37wK5m">
-                                      <node concept="37vLTw" id="7lZUamR58Iz" role="3uHU7w">
-                                        <ref role="3cqZAo" node="7lZUamR56D4" resolve="lockName" />
+                                    <node concept="3cpWs3" id="7lZUamRiuYv" role="37wK5m">
+                                      <node concept="2OqwBi" id="7lZUamRiuYw" role="3uHU7w">
+                                        <node concept="37vLTw" id="7lZUamRiuYx" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="7lZUamR5533" resolve="p0" />
+                                        </node>
+                                        <node concept="liA8E" id="7lZUamRiuYy" role="2OqNvi">
+                                          <ref role="37wK5l" to="jr46:~Message.body():java.lang.Object" resolve="body" />
+                                        </node>
                                       </node>
-                                      <node concept="Xl_RD" id="7lZUamR58sw" role="3uHU7B">
-                                        <property role="Xl_RC" value="Received locking msg with lockName: " />
+                                      <node concept="Xl_RD" id="7lZUamRiuYz" role="3uHU7B">
+                                        <property role="Xl_RC" value="Received a msg on locking topic but wrong type: " />
                                       </node>
                                     </node>
                                   </node>
                                 </node>
                               </node>
-                              <node concept="3clFbH" id="7lZUamR587c" role="3cqZAp" />
-                              <node concept="3clFbJ" id="7lZUamR56Q$" role="3cqZAp">
-                                <node concept="3clFbS" id="7lZUamR56QA" role="3clFbx">
-                                  <node concept="3cpWs8" id="7lZUamR57LX" role="3cqZAp">
-                                    <node concept="3cpWsn" id="7lZUamR57LY" role="3cpWs9">
-                                      <property role="TrG5h" value="replyMsg" />
-                                      <node concept="3uibUv" id="7lZUamR57LZ" role="1tU5fm">
-                                        <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
-                                      </node>
-                                      <node concept="2OqwBi" id="7lZUamR553x" role="33vP2m">
-                                        <node concept="2ShNRf" id="7lZUamR553y" role="2Oq$k0">
-                                          <node concept="1pGfFk" id="7lZUamR553z" role="2ShVmc">
-                                            <ref role="37wK5l" to="r9e0:~JsonObject.&lt;init&gt;()" resolve="JsonObject" />
-                                          </node>
-                                        </node>
-                                        <node concept="liA8E" id="7lZUamR553$" role="2OqNvi">
-                                          <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
-                                          <node concept="Xl_RD" id="7lZUamR553_" role="37wK5m">
-                                            <property role="Xl_RC" value="lockname" />
-                                          </node>
-                                          <node concept="37vLTw" id="7lZUamR57Dk" role="37wK5m">
-                                            <ref role="3cqZAo" node="7lZUamR56D4" resolve="lockName" />
-                                          </node>
-                                        </node>
+                              <node concept="3clFbH" id="7lZUamRitqV" role="3cqZAp" />
+                            </node>
+                            <node concept="22lmx$" id="7lZUamRiu9I" role="3clFbw">
+                              <node concept="3fqX7Q" id="7lZUamRo8dc" role="3uHU7w">
+                                <node concept="2OqwBi" id="7lZUamRo8de" role="3fr31v">
+                                  <node concept="2OqwBi" id="7lZUamRo8df" role="2Oq$k0">
+                                    <node concept="37vLTw" id="7lZUamRo8dg" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="7lZUamR5538" resolve="obj" />
+                                    </node>
+                                    <node concept="liA8E" id="7lZUamRo8dh" role="2OqNvi">
+                                      <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
+                                      <node concept="Xl_RD" id="7lZUamRo8di" role="37wK5m">
+                                        <property role="Xl_RC" value="type" />
                                       </node>
                                     </node>
                                   </node>
-                                  <node concept="3clFbF" id="7lZUamR58Kz" role="3cqZAp">
-                                    <node concept="2OqwBi" id="7lZUamR58K$" role="3clFbG">
-                                      <node concept="2YIFZM" id="7lZUamR58K_" role="2Oq$k0">
-                                        <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
-                                        <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
-                                        <node concept="3VsKOn" id="7lZUamR58KA" role="37wK5m">
-                                          <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="GlobalLogger" />
-                                        </node>
-                                      </node>
-                                      <node concept="liA8E" id="7lZUamR58KB" role="2OqNvi">
-                                        <ref role="37wK5l" to="q7tw:~Category.error(java.lang.Object):void" resolve="error" />
-                                        <node concept="3cpWs3" id="7lZUamR58KC" role="37wK5m">
-                                          <node concept="37vLTw" id="7lZUamR58KD" role="3uHU7w">
-                                            <ref role="3cqZAo" node="7lZUamR56D4" resolve="lockName" />
-                                          </node>
-                                          <node concept="Xl_RD" id="7lZUamR58KE" role="3uHU7B">
-                                            <property role="Xl_RC" value="Replying with a lock for lockName: " />
-                                          </node>
-                                        </node>
-                                      </node>
-                                    </node>
-                                  </node>
-                                  <node concept="3clFbF" id="7lZUamR599h" role="3cqZAp">
-                                    <node concept="2OqwBi" id="7lZUamR59dx" role="3clFbG">
-                                      <node concept="37vLTw" id="7lZUamR599f" role="2Oq$k0">
-                                        <ref role="3cqZAo" node="7r6PTxtZyHH" resolve="eventBus" />
-                                      </node>
-                                      <node concept="liA8E" id="7lZUamR59fE" role="2OqNvi">
-                                        <ref role="37wK5l" to="jr46:~EventBus.publish(java.lang.String,java.lang.Object):io.vertx.core.eventbus.EventBus" resolve="publish" />
-                                        <node concept="Xl_RD" id="7lZUamR59h8" role="37wK5m">
-                                          <property role="Xl_RC" value="locking" />
-                                        </node>
-                                        <node concept="37vLTw" id="7lZUamR59m3" role="37wK5m">
-                                          <ref role="3cqZAo" node="7lZUamR57LY" resolve="replyMsg" />
-                                        </node>
-                                      </node>
+                                  <node concept="liA8E" id="7lZUamRo8dj" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                                    <node concept="Xl_RD" id="7lZUamRo8dk" role="37wK5m">
+                                      <property role="Xl_RC" value="lock" />
                                     </node>
                                   </node>
                                 </node>
-                                <node concept="2OqwBi" id="7lZUamR56Vw" role="3clFbw">
-                                  <node concept="37vLTw" id="7lZUamR56TO" role="2Oq$k0">
-                                    <ref role="3cqZAo" node="7lZUamR56D4" resolve="lockName" />
+                              </node>
+                              <node concept="3fqX7Q" id="7lZUamRitTJ" role="3uHU7B">
+                                <node concept="2OqwBi" id="7lZUamRitTL" role="3fr31v">
+                                  <node concept="37vLTw" id="7lZUamRitTM" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="7lZUamR5538" resolve="obj" />
                                   </node>
-                                  <node concept="liA8E" id="7lZUamR56X9" role="2OqNvi">
-                                    <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence):boolean" resolve="contains" />
-                                    <node concept="Xl_RD" id="7lZUamR570I" role="37wK5m">
-                                      <property role="Xl_RC" value="ORDER_10" />
+                                  <node concept="liA8E" id="7lZUamRitTN" role="2OqNvi">
+                                    <ref role="37wK5l" to="r9e0:~JsonObject.containsKey(java.lang.String):boolean" resolve="containsKey" />
+                                    <node concept="Xl_RD" id="7lZUamRitTO" role="37wK5m">
+                                      <property role="Xl_RC" value="type" />
                                     </node>
                                   </node>
                                 </node>
                               </node>
                             </node>
-                            <node concept="2OqwBi" id="7lZUamR553n" role="3clFbw">
-                              <node concept="37vLTw" id="7lZUamR553o" role="2Oq$k0">
-                                <ref role="3cqZAo" node="7lZUamR5538" resolve="obj" />
-                              </node>
-                              <node concept="liA8E" id="7lZUamR553p" role="2OqNvi">
-                                <ref role="37wK5l" to="r9e0:~JsonObject.containsKey(java.lang.String):boolean" resolve="containsKey" />
-                                <node concept="Xl_RD" id="7lZUamR553q" role="37wK5m">
-                                  <property role="Xl_RC" value="lockname" />
+                            <node concept="3eNFk2" id="7lZUamRiv9X" role="3eNLev">
+                              <node concept="3clFbS" id="7lZUamRiv9Z" role="3eOfB_">
+                                <node concept="3cpWs8" id="7lZUamR56D1" role="3cqZAp">
+                                  <node concept="3cpWsn" id="7lZUamR56D4" role="3cpWs9">
+                                    <property role="TrG5h" value="lockName" />
+                                    <node concept="17QB3L" id="7lZUamR56CZ" role="1tU5fm" />
+                                    <node concept="2OqwBi" id="7lZUamR56GT" role="33vP2m">
+                                      <node concept="2OqwBi" id="7lZUamR562Q" role="2Oq$k0">
+                                        <node concept="37vLTw" id="7lZUamR55ZO" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="7lZUamR5538" resolve="obj" />
+                                        </node>
+                                        <node concept="liA8E" id="7lZUamR565R" role="2OqNvi">
+                                          <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
+                                          <node concept="Xl_RD" id="7lZUamR569u" role="37wK5m">
+                                            <property role="Xl_RC" value="lockName" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                      <node concept="liA8E" id="7lZUamR56L1" role="2OqNvi">
+                                        <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
+                                      </node>
+                                    </node>
+                                  </node>
                                 </node>
+                                <node concept="3cpWs8" id="7lZUamRexDx" role="3cqZAp">
+                                  <node concept="3cpWsn" id="7lZUamRexDy" role="3cpWs9">
+                                    <property role="TrG5h" value="userName" />
+                                    <node concept="17QB3L" id="7lZUamRexDz" role="1tU5fm" />
+                                    <node concept="2OqwBi" id="7lZUamRexD$" role="33vP2m">
+                                      <node concept="2OqwBi" id="7lZUamRexD_" role="2Oq$k0">
+                                        <node concept="37vLTw" id="7lZUamRexDA" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="7lZUamR5538" resolve="obj" />
+                                        </node>
+                                        <node concept="liA8E" id="7lZUamRexDB" role="2OqNvi">
+                                          <ref role="37wK5l" to="r9e0:~JsonObject.getString(java.lang.String):java.lang.String" resolve="getString" />
+                                          <node concept="Xl_RD" id="7lZUamRexDC" role="37wK5m">
+                                            <property role="Xl_RC" value="userName" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                      <node concept="liA8E" id="7lZUamRexDD" role="2OqNvi">
+                                        <ref role="37wK5l" to="wyt6:~String.toUpperCase():java.lang.String" resolve="toUpperCase" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="3clFbH" id="7lZUamRisRa" role="3cqZAp" />
+                                <node concept="3clFbF" id="7lZUamR58a5" role="3cqZAp">
+                                  <node concept="2OqwBi" id="7lZUamR58jZ" role="3clFbG">
+                                    <node concept="2YIFZM" id="7lZUamR58a7" role="2Oq$k0">
+                                      <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
+                                      <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
+                                      <node concept="3VsKOn" id="7lZUamR58a8" role="37wK5m">
+                                        <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="GlobalLogger" />
+                                      </node>
+                                    </node>
+                                    <node concept="liA8E" id="7lZUamR58qt" role="2OqNvi">
+                                      <ref role="37wK5l" to="q7tw:~Category.error(java.lang.Object):void" resolve="error" />
+                                      <node concept="3cpWs3" id="7lZUamReznK" role="37wK5m">
+                                        <node concept="37vLTw" id="7lZUamRezr9" role="3uHU7w">
+                                          <ref role="3cqZAo" node="7lZUamRexDy" resolve="userName" />
+                                        </node>
+                                        <node concept="3cpWs3" id="7lZUamRezaZ" role="3uHU7B">
+                                          <node concept="3cpWs3" id="7lZUamR58Gd" role="3uHU7B">
+                                            <node concept="Xl_RD" id="7lZUamR58sw" role="3uHU7B">
+                                              <property role="Xl_RC" value="Received locking msg with lockName: " />
+                                            </node>
+                                            <node concept="37vLTw" id="7lZUamR58Iz" role="3uHU7w">
+                                              <ref role="3cqZAo" node="7lZUamR56D4" resolve="lockName" />
+                                            </node>
+                                          </node>
+                                          <node concept="Xl_RD" id="7lZUamRezbH" role="3uHU7w">
+                                            <property role="Xl_RC" value=" / userName: " />
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="3clFbH" id="7lZUamR587c" role="3cqZAp" />
+                                <node concept="3clFbJ" id="7lZUamR56Q$" role="3cqZAp">
+                                  <node concept="3clFbS" id="7lZUamR56QA" role="3clFbx">
+                                    <node concept="3cpWs8" id="7lZUamR57LX" role="3cqZAp">
+                                      <node concept="3cpWsn" id="7lZUamR57LY" role="3cpWs9">
+                                        <property role="TrG5h" value="replyMsg" />
+                                        <node concept="3uibUv" id="7lZUamR57LZ" role="1tU5fm">
+                                          <ref role="3uigEE" to="r9e0:~JsonObject" resolve="JsonObject" />
+                                        </node>
+                                        <node concept="2OqwBi" id="7lZUamRpgJZ" role="33vP2m">
+                                          <node concept="2OqwBi" id="7lZUamRexU0" role="2Oq$k0">
+                                            <node concept="2OqwBi" id="7lZUamR553x" role="2Oq$k0">
+                                              <node concept="2ShNRf" id="7lZUamR553y" role="2Oq$k0">
+                                                <node concept="1pGfFk" id="7lZUamR553z" role="2ShVmc">
+                                                  <ref role="37wK5l" to="r9e0:~JsonObject.&lt;init&gt;()" resolve="JsonObject" />
+                                                </node>
+                                              </node>
+                                              <node concept="liA8E" id="7lZUamR553$" role="2OqNvi">
+                                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                                                <node concept="Xl_RD" id="7lZUamR553_" role="37wK5m">
+                                                  <property role="Xl_RC" value="lockName" />
+                                                </node>
+                                                <node concept="37vLTw" id="7lZUamR57Dk" role="37wK5m">
+                                                  <ref role="3cqZAo" node="7lZUamR56D4" resolve="lockName" />
+                                                </node>
+                                              </node>
+                                            </node>
+                                            <node concept="liA8E" id="7lZUamRey6E" role="2OqNvi">
+                                              <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                                              <node concept="Xl_RD" id="7lZUamRey9H" role="37wK5m">
+                                                <property role="Xl_RC" value="userName" />
+                                              </node>
+                                              <node concept="Xl_RD" id="7lZUamReyhk" role="37wK5m">
+                                                <property role="Xl_RC" value="CENTRIX" />
+                                              </node>
+                                            </node>
+                                          </node>
+                                          <node concept="liA8E" id="7lZUamRpgWT" role="2OqNvi">
+                                            <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                                            <node concept="Xl_RD" id="7lZUamRphiX" role="37wK5m">
+                                              <property role="Xl_RC" value="type" />
+                                            </node>
+                                            <node concept="Xl_RD" id="7lZUamRphrr" role="37wK5m">
+                                              <property role="Xl_RC" value="lock" />
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                    <node concept="3clFbF" id="7lZUamR58Kz" role="3cqZAp">
+                                      <node concept="2OqwBi" id="7lZUamR58K$" role="3clFbG">
+                                        <node concept="2YIFZM" id="7lZUamR58K_" role="2Oq$k0">
+                                          <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
+                                          <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
+                                          <node concept="3VsKOn" id="7lZUamR58KA" role="37wK5m">
+                                            <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="GlobalLogger" />
+                                          </node>
+                                        </node>
+                                        <node concept="liA8E" id="7lZUamR58KB" role="2OqNvi">
+                                          <ref role="37wK5l" to="q7tw:~Category.error(java.lang.Object):void" resolve="error" />
+                                          <node concept="3cpWs3" id="7lZUamR58KC" role="37wK5m">
+                                            <node concept="37vLTw" id="7lZUamR58KD" role="3uHU7w">
+                                              <ref role="3cqZAo" node="7lZUamR56D4" resolve="lockName" />
+                                            </node>
+                                            <node concept="Xl_RD" id="7lZUamR58KE" role="3uHU7B">
+                                              <property role="Xl_RC" value="Replying with a lock for lockName: " />
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                    <node concept="3clFbF" id="7lZUamR599h" role="3cqZAp">
+                                      <node concept="2OqwBi" id="7lZUamR59dx" role="3clFbG">
+                                        <node concept="37vLTw" id="7lZUamR599f" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="7r6PTxtZyHH" resolve="eventBus" />
+                                        </node>
+                                        <node concept="liA8E" id="7lZUamR59fE" role="2OqNvi">
+                                          <ref role="37wK5l" to="jr46:~EventBus.publish(java.lang.String,java.lang.Object):io.vertx.core.eventbus.EventBus" resolve="publish" />
+                                          <node concept="Xl_RD" id="7lZUamR59h8" role="37wK5m">
+                                            <property role="Xl_RC" value="locking" />
+                                          </node>
+                                          <node concept="37vLTw" id="7lZUamR59m3" role="37wK5m">
+                                            <ref role="3cqZAo" node="7lZUamR57LY" resolve="replyMsg" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="1Wc70l" id="7lZUamReyHv" role="3clFbw">
+                                    <node concept="3fqX7Q" id="7lZUamRez82" role="3uHU7w">
+                                      <node concept="2OqwBi" id="7lZUamRez84" role="3fr31v">
+                                        <node concept="37vLTw" id="7lZUamRez85" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="7lZUamRexDy" resolve="userName" />
+                                        </node>
+                                        <node concept="liA8E" id="7lZUamRez86" role="2OqNvi">
+                                          <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
+                                          <node concept="Xl_RD" id="7lZUamRez87" role="37wK5m">
+                                            <property role="Xl_RC" value="CENTRIX" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                    <node concept="2OqwBi" id="7lZUamR56Vw" role="3uHU7B">
+                                      <node concept="37vLTw" id="7lZUamR56TO" role="2Oq$k0">
+                                        <ref role="3cqZAo" node="7lZUamR56D4" resolve="lockName" />
+                                      </node>
+                                      <node concept="liA8E" id="7lZUamR56X9" role="2OqNvi">
+                                        <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence):boolean" resolve="contains" />
+                                        <node concept="Xl_RD" id="7lZUamR570I" role="37wK5m">
+                                          <property role="Xl_RC" value="ORDER_10" />
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="3clFbH" id="7lZUamRiwfo" role="3cqZAp" />
+                              </node>
+                              <node concept="1Wc70l" id="7lZUamRiqfF" role="3eO9$A">
+                                <node concept="2OqwBi" id="7lZUamRiqLv" role="3uHU7w">
+                                  <node concept="37vLTw" id="7lZUamRiqHR" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="7lZUamR5538" resolve="obj" />
+                                  </node>
+                                  <node concept="liA8E" id="7lZUamRiqQW" role="2OqNvi">
+                                    <ref role="37wK5l" to="r9e0:~JsonObject.containsKey(java.lang.String):boolean" resolve="containsKey" />
+                                    <node concept="Xl_RD" id="7lZUamRiqTB" role="37wK5m">
+                                      <property role="Xl_RC" value="type" />
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="1Wc70l" id="7lZUamRevoM" role="3uHU7B">
+                                  <node concept="2OqwBi" id="7lZUamR553n" role="3uHU7B">
+                                    <node concept="37vLTw" id="7lZUamR553o" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="7lZUamR5538" resolve="obj" />
+                                    </node>
+                                    <node concept="liA8E" id="7lZUamR553p" role="2OqNvi">
+                                      <ref role="37wK5l" to="r9e0:~JsonObject.containsKey(java.lang.String):boolean" resolve="containsKey" />
+                                      <node concept="Xl_RD" id="7lZUamR553q" role="37wK5m">
+                                        <property role="Xl_RC" value="lockName" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="2OqwBi" id="7lZUamRevQ2" role="3uHU7w">
+                                    <node concept="37vLTw" id="7lZUamRevN0" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="7lZUamR5538" resolve="obj" />
+                                    </node>
+                                    <node concept="liA8E" id="7lZUamRevSW" role="2OqNvi">
+                                      <ref role="37wK5l" to="r9e0:~JsonObject.containsKey(java.lang.String):boolean" resolve="containsKey" />
+                                      <node concept="Xl_RD" id="7lZUamRevUN" role="37wK5m">
+                                        <property role="Xl_RC" value="userName" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                            <node concept="9aQIb" id="7lZUamRiwpB" role="9aQIa">
+                              <node concept="3clFbS" id="7lZUamRiwpC" role="9aQI4">
+                                <node concept="3clFbF" id="7lZUamRewwY" role="3cqZAp">
+                                  <node concept="2OqwBi" id="7lZUamRewwZ" role="3clFbG">
+                                    <node concept="2YIFZM" id="7lZUamRewx0" role="2Oq$k0">
+                                      <ref role="37wK5l" to="q7tw:~Logger.getLogger(java.lang.Class):org.apache.log4j.Logger" resolve="getLogger" />
+                                      <ref role="1Pybhc" to="q7tw:~Logger" resolve="Logger" />
+                                      <node concept="3VsKOn" id="7lZUamRewx1" role="37wK5m">
+                                        <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="GlobalLogger" />
+                                      </node>
+                                    </node>
+                                    <node concept="liA8E" id="7lZUamRewx2" role="2OqNvi">
+                                      <ref role="37wK5l" to="q7tw:~Category.error(java.lang.Object):void" resolve="error" />
+                                      <node concept="3cpWs3" id="7lZUamRewx3" role="37wK5m">
+                                        <node concept="2OqwBi" id="7lZUamRexh5" role="3uHU7w">
+                                          <node concept="37vLTw" id="7lZUamRexek" role="2Oq$k0">
+                                            <ref role="3cqZAo" node="7lZUamR5533" resolve="p0" />
+                                          </node>
+                                          <node concept="liA8E" id="7lZUamRexk2" role="2OqNvi">
+                                            <ref role="37wK5l" to="jr46:~Message.body():java.lang.Object" resolve="body" />
+                                          </node>
+                                        </node>
+                                        <node concept="Xl_RD" id="7lZUamRewx5" role="3uHU7B">
+                                          <property role="Xl_RC" value="Received a msg on locking topic without type/lockName/userName field: " />
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="3clFbH" id="7lZUamRiwMh" role="3cqZAp" />
                               </node>
                             </node>
                           </node>
+                          <node concept="3clFbH" id="7lZUamRixcL" role="3cqZAp" />
                           <node concept="3SKdUt" id="7lZUamR553M" role="3cqZAp">
                             <node concept="3SKdUq" id="7lZUamR553N" role="3SKWNk">
                               <property role="3SKdUp" value="else, do nothing ... " />
