@@ -275,7 +275,7 @@
 							      var options = {
 							        title: "{{ keyEventGraph.title }}",
 							        chartArea: {
-							        	width: 800,
+							        	width: 700,
 							        	height: 1300,
 							        	},
 							        bar: {groupWidth: "95%"},

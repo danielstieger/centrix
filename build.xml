@@ -28,7 +28,7 @@
   
   <!-- **** app specific definitions **************************************************************** -->
   <property name="projectName"          value="centrix" />
-  <property name="projectVersion"       value="1.0.0" />
+  <property name="projectVersion"       value="1.1.0" />
 
   <!-- <property name="projectMainClass"     value="org.modellwerkstatt.centrix.globallog.GlobalLogger" /> -->
   <property name="projectMainClass"     value="org.modellwerkstatt.centrix.globallog.GlobalLogger" />
