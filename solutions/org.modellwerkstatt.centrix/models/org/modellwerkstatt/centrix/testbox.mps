@@ -216,7 +216,7 @@
             </node>
             <node concept="2YIFZM" id="7r6PTxtZtHK" role="33vP2m">
               <ref role="1Pybhc" to="oa7s:~Router" resolve="Router" />
-              <ref role="37wK5l" to="oa7s:~Router.router(io.vertx.core.Vertx):io.vertx.ext.web.Router" resolve="router" />
+              <ref role="37wK5l" to="oa7s:~Router.router(io.vertx.core.Vertx)" resolve="router" />
               <node concept="37vLTw" id="7r6PTxtZtHL" role="37wK5m">
                 <ref role="3cqZAo" to="sv4e:~AbstractVerticle.vertx" resolve="vertx" />
               </node>
@@ -238,7 +238,7 @@
                   </node>
                 </node>
                 <node concept="liA8E" id="4NNU34MBUZd" role="2OqNvi">
-                  <ref role="37wK5l" to="22w7:~BridgeOptions.addInboundPermitted(io.vertx.ext.bridge.PermittedOptions):io.vertx.ext.web.handler.sockjs.BridgeOptions" resolve="addInboundPermitted" />
+                  <ref role="37wK5l" to="22w7:~BridgeOptions.addInboundPermitted(io.vertx.ext.bridge.PermittedOptions)" resolve="addInboundPermitted" />
                   <node concept="2OqwBi" id="4NNU34MCf1R" role="37wK5m">
                     <node concept="2ShNRf" id="4NNU34MCdDB" role="2Oq$k0">
                       <node concept="1pGfFk" id="4NNU34MCf0X" role="2ShVmc">
@@ -246,7 +246,7 @@
                       </node>
                     </node>
                     <node concept="liA8E" id="4NNU34MCf3w" role="2OqNvi">
-                      <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String):io.vertx.ext.bridge.PermittedOptions" resolve="setAddress" />
+                      <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String)" resolve="setAddress" />
                       <node concept="Xl_RD" id="4NNU34MCf4$" role="37wK5m">
                         <property role="Xl_RC" value="keyer" />
                       </node>
@@ -255,7 +255,7 @@
                 </node>
               </node>
               <node concept="liA8E" id="3qyYjZ1wVWC" role="2OqNvi">
-                <ref role="37wK5l" to="22w7:~BridgeOptions.addOutboundPermitted(io.vertx.ext.bridge.PermittedOptions):io.vertx.ext.web.handler.sockjs.BridgeOptions" resolve="addOutboundPermitted" />
+                <ref role="37wK5l" to="22w7:~BridgeOptions.addOutboundPermitted(io.vertx.ext.bridge.PermittedOptions)" resolve="addOutboundPermitted" />
                 <node concept="2OqwBi" id="3qyYjZ1wVZd" role="37wK5m">
                   <node concept="2ShNRf" id="3qyYjZ1wVZe" role="2Oq$k0">
                     <node concept="1pGfFk" id="3qyYjZ1wVZf" role="2ShVmc">
@@ -263,7 +263,7 @@
                     </node>
                   </node>
                   <node concept="liA8E" id="3qyYjZ1wVZg" role="2OqNvi">
-                    <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String):io.vertx.ext.bridge.PermittedOptions" resolve="setAddress" />
+                    <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String)" resolve="setAddress" />
                     <node concept="Xl_RD" id="3qyYjZ1wVZh" role="37wK5m">
                       <property role="Xl_RC" value="keyer" />
                     </node>
@@ -281,14 +281,14 @@
             </node>
             <node concept="2OqwBi" id="4NNU34MCgyB" role="33vP2m">
               <node concept="2YIFZM" id="7r6PTxtZvMf" role="2Oq$k0">
-                <ref role="37wK5l" to="22w7:~SockJSHandler.create(io.vertx.core.Vertx):io.vertx.ext.web.handler.sockjs.SockJSHandler" resolve="create" />
+                <ref role="37wK5l" to="22w7:~SockJSHandler.create(io.vertx.core.Vertx)" resolve="create" />
                 <ref role="1Pybhc" to="22w7:~SockJSHandler" resolve="SockJSHandler" />
                 <node concept="37vLTw" id="7r6PTxtZvMg" role="37wK5m">
                   <ref role="3cqZAo" to="sv4e:~AbstractVerticle.vertx" resolve="vertx" />
                 </node>
               </node>
               <node concept="liA8E" id="4NNU34MCgTo" role="2OqNvi">
-                <ref role="37wK5l" to="22w7:~SockJSHandler.bridge(io.vertx.ext.web.handler.sockjs.BridgeOptions):io.vertx.ext.web.handler.sockjs.SockJSHandler" resolve="bridge" />
+                <ref role="37wK5l" to="22w7:~SockJSHandler.bridge(io.vertx.ext.web.handler.sockjs.BridgeOptions)" resolve="bridge" />
                 <node concept="37vLTw" id="4NNU34MCgUj" role="37wK5m">
                   <ref role="3cqZAo" node="4NNU34MBUy0" resolve="sockJsBridgeOptions" />
                 </node>
@@ -304,11 +304,11 @@
                 <ref role="3cqZAo" node="4NNU34MBNf$" resolve="router" />
               </node>
               <node concept="liA8E" id="4NNU34MClCL" role="2OqNvi">
-                <ref role="37wK5l" to="oa7s:~Router.route():io.vertx.ext.web.Route" resolve="route" />
+                <ref role="37wK5l" to="oa7s:~Router.route()" resolve="route" />
               </node>
             </node>
             <node concept="liA8E" id="4NNU34MClVz" role="2OqNvi">
-              <ref role="37wK5l" to="oa7s:~Route.handler(io.vertx.core.Handler):io.vertx.ext.web.Route" resolve="handler" />
+              <ref role="37wK5l" to="oa7s:~Route.handler(io.vertx.core.Handler)" resolve="handler" />
               <node concept="2OqwBi" id="4NNU34MBTkk" role="37wK5m">
                 <node concept="2OqwBi" id="4NNU34MBTaw" role="2Oq$k0">
                   <node concept="2OqwBi" id="4NNU34MBT14" role="2Oq$k0">
@@ -319,14 +319,14 @@
                             <node concept="2OqwBi" id="4NNU34MBRQU" role="2Oq$k0">
                               <node concept="2OqwBi" id="4NNU34MBREr" role="2Oq$k0">
                                 <node concept="2YIFZM" id="7r6PTxtZLfO" role="2Oq$k0">
-                                  <ref role="37wK5l" to="e8lw:~CorsHandler.create(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="create" />
+                                  <ref role="37wK5l" to="e8lw:~CorsHandler.create(java.lang.String)" resolve="create" />
                                   <ref role="1Pybhc" to="e8lw:~CorsHandler" resolve="CorsHandler" />
                                   <node concept="Xl_RD" id="3qyYjZ1wWs0" role="37wK5m">
                                     <property role="Xl_RC" value="http://localhost:8088*" />
                                   </node>
                                 </node>
                                 <node concept="liA8E" id="4NNU34MBRGT" role="2OqNvi">
-                                  <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod):io.vertx.ext.web.handler.CorsHandler" resolve="allowedMethod" />
+                                  <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod)" resolve="allowedMethod" />
                                   <node concept="Rm8GO" id="7r6PTxtZLi$" role="37wK5m">
                                     <ref role="Rm8GQ" to="q0a0:~HttpMethod.GET" resolve="GET" />
                                     <ref role="1Px2BO" to="q0a0:~HttpMethod" resolve="HttpMethod" />
@@ -334,7 +334,7 @@
                                 </node>
                               </node>
                               <node concept="liA8E" id="4NNU34MBRTq" role="2OqNvi">
-                                <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod):io.vertx.ext.web.handler.CorsHandler" resolve="allowedMethod" />
+                                <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod)" resolve="allowedMethod" />
                                 <node concept="Rm8GO" id="4NNU34MBRY4" role="37wK5m">
                                   <ref role="1Px2BO" to="q0a0:~HttpMethod" resolve="HttpMethod" />
                                   <ref role="Rm8GQ" to="q0a0:~HttpMethod.POST" resolve="POST" />
@@ -342,7 +342,7 @@
                               </node>
                             </node>
                             <node concept="liA8E" id="4NNU34MBS44" role="2OqNvi">
-                              <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod):io.vertx.ext.web.handler.CorsHandler" resolve="allowedMethod" />
+                              <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod)" resolve="allowedMethod" />
                               <node concept="Rm8GO" id="7r6PTxtZLnK" role="37wK5m">
                                 <ref role="1Px2BO" to="q0a0:~HttpMethod" resolve="HttpMethod" />
                                 <ref role="Rm8GQ" to="q0a0:~HttpMethod.PUT" resolve="PUT" />
@@ -350,7 +350,7 @@
                             </node>
                           </node>
                           <node concept="liA8E" id="4NNU34MBSle" role="2OqNvi">
-                            <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod):io.vertx.ext.web.handler.CorsHandler" resolve="allowedMethod" />
+                            <ref role="37wK5l" to="e8lw:~CorsHandler.allowedMethod(io.vertx.core.http.HttpMethod)" resolve="allowedMethod" />
                             <node concept="Rm8GO" id="7r6PTxtZLs8" role="37wK5m">
                               <ref role="1Px2BO" to="q0a0:~HttpMethod" resolve="HttpMethod" />
                               <ref role="Rm8GQ" to="q0a0:~HttpMethod.OPTIONS" resolve="OPTIONS" />
@@ -358,35 +358,35 @@
                           </node>
                         </node>
                         <node concept="liA8E" id="4NNU34MBSy6" role="2OqNvi">
-                          <ref role="37wK5l" to="e8lw:~CorsHandler.allowCredentials(boolean):io.vertx.ext.web.handler.CorsHandler" resolve="allowCredentials" />
+                          <ref role="37wK5l" to="e8lw:~CorsHandler.allowCredentials(boolean)" resolve="allowCredentials" />
                           <node concept="3clFbT" id="4NNU34MC_Er" role="37wK5m">
                             <property role="3clFbU" value="true" />
                           </node>
                         </node>
                       </node>
                       <node concept="liA8E" id="4NNU34MBSH8" role="2OqNvi">
-                        <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="allowedHeader" />
+                        <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String)" resolve="allowedHeader" />
                         <node concept="Xl_RD" id="4NNU34MBSK9" role="37wK5m">
                           <property role="Xl_RC" value="Access-Control-Allow-Method" />
                         </node>
                       </node>
                     </node>
                     <node concept="liA8E" id="4NNU34MBT6O" role="2OqNvi">
-                      <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="allowedHeader" />
+                      <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String)" resolve="allowedHeader" />
                       <node concept="Xl_RD" id="4NNU34MBTA3" role="37wK5m">
                         <property role="Xl_RC" value="Access-Control-Allow-Origin" />
                       </node>
                     </node>
                   </node>
                   <node concept="liA8E" id="4NNU34MBTgA" role="2OqNvi">
-                    <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="allowedHeader" />
+                    <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String)" resolve="allowedHeader" />
                     <node concept="Xl_RD" id="4NNU34MBTyf" role="37wK5m">
                       <property role="Xl_RC" value="Access-Control-Allow-Credentials" />
                     </node>
                   </node>
                 </node>
                 <node concept="liA8E" id="4NNU34MBTqK" role="2OqNvi">
-                  <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String):io.vertx.ext.web.handler.CorsHandler" resolve="allowedHeader" />
+                  <ref role="37wK5l" to="e8lw:~CorsHandler.allowedHeader(java.lang.String)" resolve="allowedHeader" />
                   <node concept="Xl_RD" id="4NNU34MBTuu" role="37wK5m">
                     <property role="Xl_RC" value="Content-Type" />
                   </node>
@@ -403,14 +403,14 @@
                 <ref role="3cqZAo" node="4NNU34MBNf$" resolve="router" />
               </node>
               <node concept="liA8E" id="4NNU34MCi0v" role="2OqNvi">
-                <ref role="37wK5l" to="oa7s:~Router.route(java.lang.String):io.vertx.ext.web.Route" resolve="route" />
+                <ref role="37wK5l" to="oa7s:~Router.route(java.lang.String)" resolve="route" />
                 <node concept="Xl_RD" id="4NNU34MCi12" role="37wK5m">
                   <property role="Xl_RC" value="/eventbus/*" />
                 </node>
               </node>
             </node>
             <node concept="liA8E" id="4NNU34MCikX" role="2OqNvi">
-              <ref role="37wK5l" to="oa7s:~Route.handler(io.vertx.core.Handler):io.vertx.ext.web.Route" resolve="handler" />
+              <ref role="37wK5l" to="oa7s:~Route.handler(io.vertx.core.Handler)" resolve="handler" />
               <node concept="37vLTw" id="4NNU34MCkuS" role="37wK5m">
                 <ref role="3cqZAo" node="4NNU34MCjgF" resolve="ebHandler" />
               </node>
@@ -426,11 +426,11 @@
                   <ref role="3cqZAo" to="sv4e:~AbstractVerticle.vertx" resolve="vertx" />
                 </node>
                 <node concept="liA8E" id="4NNU34MCocl" role="2OqNvi">
-                  <ref role="37wK5l" to="sv4e:~Vertx.createHttpServer():io.vertx.core.http.HttpServer" resolve="createHttpServer" />
+                  <ref role="37wK5l" to="sv4e:~Vertx.createHttpServer()" resolve="createHttpServer" />
                 </node>
               </node>
               <node concept="liA8E" id="4NNU34MCoAk" role="2OqNvi">
-                <ref role="37wK5l" to="q0a0:~HttpServer.requestHandler(io.vertx.core.Handler):io.vertx.core.http.HttpServer" resolve="requestHandler" />
+                <ref role="37wK5l" to="q0a0:~HttpServer.requestHandler(io.vertx.core.Handler)" resolve="requestHandler" />
                 <node concept="2ShNRf" id="4NNU34MCtf4" role="37wK5m">
                   <node concept="YeOm9" id="4NNU34MCuKY" role="2ShVmc">
                     <node concept="1Y3b0j" id="4NNU34MCuL1" role="YeSDq">
@@ -458,7 +458,7 @@
                                 <ref role="3cqZAo" node="4NNU34MBNf$" resolve="router" />
                               </node>
                               <node concept="liA8E" id="4NNU34MCuY8" role="2OqNvi">
-                                <ref role="37wK5l" to="oa7s:~Router.accept(io.vertx.core.http.HttpServerRequest):void" resolve="accept" />
+                                <ref role="37wK5l" to="oa7s:~Router.accept(io.vertx.core.http.HttpServerRequest)" resolve="accept" />
                                 <node concept="37vLTw" id="4NNU34MCuYY" role="37wK5m">
                                   <ref role="3cqZAo" node="4NNU34MCuL7" resolve="p0" />
                                 </node>
@@ -476,7 +476,7 @@
               </node>
             </node>
             <node concept="liA8E" id="4NNU34MCp3C" role="2OqNvi">
-              <ref role="37wK5l" to="q0a0:~HttpServer.listen(int):io.vertx.core.http.HttpServer" resolve="listen" />
+              <ref role="37wK5l" to="q0a0:~HttpServer.listen(int)" resolve="listen" />
               <node concept="3cmrfG" id="3qyYjZ1wXgm" role="37wK5m">
                 <property role="3cmrfH" value="8088" />
               </node>
@@ -499,7 +499,7 @@
                   </node>
                 </node>
                 <node concept="liA8E" id="7r6PTxtZHQw" role="2OqNvi">
-                  <ref role="37wK5l" to="5orp:~BridgeOptions.addInboundPermitted(io.vertx.ext.bridge.PermittedOptions):io.vertx.ext.bridge.BridgeOptions" resolve="addInboundPermitted" />
+                  <ref role="37wK5l" to="5orp:~BridgeOptions.addInboundPermitted(io.vertx.ext.bridge.PermittedOptions)" resolve="addInboundPermitted" />
                   <node concept="2OqwBi" id="7r6PTxtZI9b" role="37wK5m">
                     <node concept="2ShNRf" id="7r6PTxtZHRE" role="2Oq$k0">
                       <node concept="1pGfFk" id="7r6PTxtZI86" role="2ShVmc">
@@ -507,7 +507,7 @@
                       </node>
                     </node>
                     <node concept="liA8E" id="7r6PTxtZIb0" role="2OqNvi">
-                      <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String):io.vertx.ext.bridge.PermittedOptions" resolve="setAddress" />
+                      <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String)" resolve="setAddress" />
                       <node concept="Xl_RD" id="7r6PTxtZIgG" role="37wK5m">
                         <property role="Xl_RC" value="keyer" />
                       </node>
@@ -516,7 +516,7 @@
                 </node>
               </node>
               <node concept="liA8E" id="3qyYjZ1wYWV" role="2OqNvi">
-                <ref role="37wK5l" to="5orp:~BridgeOptions.addOutboundPermitted(io.vertx.ext.bridge.PermittedOptions):io.vertx.ext.bridge.BridgeOptions" resolve="addOutboundPermitted" />
+                <ref role="37wK5l" to="5orp:~BridgeOptions.addOutboundPermitted(io.vertx.ext.bridge.PermittedOptions)" resolve="addOutboundPermitted" />
                 <node concept="2OqwBi" id="3qyYjZ1wYYW" role="37wK5m">
                   <node concept="2ShNRf" id="3qyYjZ1wYYX" role="2Oq$k0">
                     <node concept="1pGfFk" id="3qyYjZ1wYYY" role="2ShVmc">
@@ -524,7 +524,7 @@
                     </node>
                   </node>
                   <node concept="liA8E" id="3qyYjZ1wYYZ" role="2OqNvi">
-                    <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String):io.vertx.ext.bridge.PermittedOptions" resolve="setAddress" />
+                    <ref role="37wK5l" to="5orp:~PermittedOptions.setAddress(java.lang.String)" resolve="setAddress" />
                     <node concept="Xl_RD" id="3qyYjZ1wYZ0" role="37wK5m">
                       <property role="Xl_RC" value="keyer" />
                     </node>
@@ -541,7 +541,7 @@
               <ref role="3uigEE" to="zx60:~TcpEventBusBridge" resolve="TcpEventBusBridge" />
             </node>
             <node concept="2YIFZM" id="7r6PTxtZGye" role="33vP2m">
-              <ref role="37wK5l" to="zx60:~TcpEventBusBridge.create(io.vertx.core.Vertx,io.vertx.ext.bridge.BridgeOptions):io.vertx.ext.eventbus.bridge.tcp.TcpEventBusBridge" resolve="create" />
+              <ref role="37wK5l" to="zx60:~TcpEventBusBridge.create(io.vertx.core.Vertx,io.vertx.ext.bridge.BridgeOptions)" resolve="create" />
               <ref role="1Pybhc" to="zx60:~TcpEventBusBridge" resolve="TcpEventBusBridge" />
               <node concept="37vLTw" id="7r6PTxtZGz4" role="37wK5m">
                 <ref role="3cqZAo" to="sv4e:~AbstractVerticle.vertx" resolve="vertx" />
@@ -558,7 +558,7 @@
               <ref role="3cqZAo" node="7r6PTxtZGcL" resolve="tcpBridge" />
             </node>
             <node concept="liA8E" id="7r6PTxtZJrK" role="2OqNvi">
-              <ref role="37wK5l" to="zx60:~TcpEventBusBridge.listen(int):io.vertx.ext.eventbus.bridge.tcp.TcpEventBusBridge" resolve="listen" />
+              <ref role="37wK5l" to="zx60:~TcpEventBusBridge.listen(int)" resolve="listen" />
               <node concept="3cmrfG" id="3qyYjZ1wYPM" role="37wK5m">
                 <property role="3cmrfH" value="8089" />
               </node>
@@ -574,7 +574,7 @@
                 <ref role="3cqZAo" to="sv4e:~AbstractVerticle.vertx" resolve="vertx" />
               </node>
               <node concept="liA8E" id="4NNU34MBx4d" role="2OqNvi">
-                <ref role="37wK5l" to="sv4e:~Vertx.eventBus():io.vertx.core.eventbus.EventBus" resolve="eventBus" />
+                <ref role="37wK5l" to="sv4e:~Vertx.eventBus()" resolve="eventBus" />
               </node>
             </node>
             <node concept="37vLTw" id="7r6PTxtZzfK" role="37vLTJ">
@@ -591,7 +591,7 @@
                 <ref role="3cqZAo" node="7r6PTxtZyHH" resolve="eventBus" />
               </node>
               <node concept="liA8E" id="4NNU34MByh4" role="2OqNvi">
-                <ref role="37wK5l" to="jr46:~EventBus.consumer(java.lang.String,io.vertx.core.Handler):io.vertx.core.eventbus.MessageConsumer" resolve="consumer" />
+                <ref role="37wK5l" to="jr46:~EventBus.consumer(java.lang.String,io.vertx.core.Handler)" resolve="consumer" />
                 <node concept="Xl_RD" id="7r6PTxtZAkF" role="37wK5m">
                   <property role="Xl_RC" value="keyer" />
                 </node>
@@ -630,7 +630,7 @@
                                   <ref role="3cqZAo" node="1PUq9fiD9Yd" resolve="msg" />
                                 </node>
                                 <node concept="liA8E" id="7r6PTxtZBHP" role="2OqNvi">
-                                  <ref role="37wK5l" to="jr46:~Message.body():java.lang.Object" resolve="body" />
+                                  <ref role="37wK5l" to="jr46:~Message.body()" resolve="body" />
                                 </node>
                               </node>
                             </node>
@@ -647,7 +647,7 @@
                                     <ref role="3cqZAo" node="7r6PTxtZB_H" resolve="object" />
                                   </node>
                                   <node concept="liA8E" id="3qyYjZ1x1cC" role="2OqNvi">
-                                    <ref role="37wK5l" to="r9e0:~JsonObject.encodePrettily():java.lang.String" resolve="encodePrettily" />
+                                    <ref role="37wK5l" to="r9e0:~JsonObject.encodePrettily()" resolve="encodePrettily" />
                                   </node>
                                 </node>
                               </node>
@@ -685,7 +685,7 @@
                 <ref role="3cqZAo" to="sv4e:~AbstractVerticle.vertx" resolve="vertx" />
               </node>
               <node concept="liA8E" id="1PUq9fjdRN7" role="2OqNvi">
-                <ref role="37wK5l" to="sv4e:~Vertx.setPeriodic(long,io.vertx.core.Handler):long" resolve="setPeriodic" />
+                <ref role="37wK5l" to="sv4e:~Vertx.setPeriodic(long,io.vertx.core.Handler)" resolve="setPeriodic" />
                 <node concept="3cmrfG" id="3qyYjZ1x55D" role="37wK5m">
                   <property role="3cmrfH" value="30000" />
                 </node>
@@ -729,7 +729,7 @@
                                 <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
                               </node>
                               <node concept="liA8E" id="1SDXsyHcI6w" role="2OqNvi">
-                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String)" resolve="put" />
                                 <node concept="Xl_RD" id="1SDXsyHcI7A" role="37wK5m">
                                   <property role="Xl_RC" value="type" />
                                 </node>
@@ -745,7 +745,7 @@
                                 <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
                               </node>
                               <node concept="liA8E" id="3iJaUC7muBX" role="2OqNvi">
-                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String)" resolve="put" />
                                 <node concept="Xl_RD" id="3iJaUC7muCs" role="37wK5m">
                                   <property role="Xl_RC" value="userId" />
                                 </node>
@@ -761,7 +761,7 @@
                                 <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
                               </node>
                               <node concept="liA8E" id="3iJaUC7muOx" role="2OqNvi">
-                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String)" resolve="put" />
                                 <node concept="Xl_RD" id="3iJaUC7muOy" role="37wK5m">
                                   <property role="Xl_RC" value="userName" />
                                 </node>
@@ -777,7 +777,7 @@
                                 <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
                               </node>
                               <node concept="liA8E" id="3iJaUC7mv0B" role="2OqNvi">
-                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String):io.vertx.core.json.JsonObject" resolve="put" />
+                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.String)" resolve="put" />
                                 <node concept="Xl_RD" id="3iJaUC7mv0C" role="37wK5m">
                                   <property role="Xl_RC" value="message" />
                                 </node>
@@ -798,12 +798,12 @@
                                 <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
                               </node>
                               <node concept="liA8E" id="3iJaUC7mvzr" role="2OqNvi">
-                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Double):io.vertx.core.json.JsonObject" resolve="put" />
+                                <ref role="37wK5l" to="r9e0:~JsonObject.put(java.lang.String,java.lang.Double)" resolve="put" />
                                 <node concept="Xl_RD" id="3iJaUC7mv$x" role="37wK5m">
                                   <property role="Xl_RC" value="timestamp" />
                                 </node>
                                 <node concept="2YIFZM" id="3iJaUC7mvLh" role="37wK5m">
-                                  <ref role="37wK5l" to="wyt6:~System.currentTimeMillis():long" resolve="currentTimeMillis" />
+                                  <ref role="37wK5l" to="wyt6:~System.currentTimeMillis()" resolve="currentTimeMillis" />
                                   <ref role="1Pybhc" to="wyt6:~System" resolve="System" />
                                 </node>
                               </node>
@@ -817,7 +817,7 @@
                                 <ref role="3cqZAo" node="7r6PTxtZyHH" resolve="eventBus" />
                               </node>
                               <node concept="liA8E" id="3qyYjZ1x5N1" role="2OqNvi">
-                                <ref role="37wK5l" to="jr46:~EventBus.publish(java.lang.String,java.lang.Object):io.vertx.core.eventbus.EventBus" resolve="publish" />
+                                <ref role="37wK5l" to="jr46:~EventBus.publish(java.lang.String,java.lang.Object)" resolve="publish" />
                                 <node concept="Xl_RD" id="3qyYjZ1x5Oa" role="37wK5m">
                                   <property role="Xl_RC" value="keyer" />
                                 </node>
@@ -840,7 +840,7 @@
                                       <ref role="3cqZAo" node="3qyYjZ1x5Uv" resolve="object" />
                                     </node>
                                     <node concept="liA8E" id="3iJaUC7mwQ1" role="2OqNvi">
-                                      <ref role="37wK5l" to="r9e0:~JsonObject.encodePrettily():java.lang.String" resolve="encodePrettily" />
+                                      <ref role="37wK5l" to="r9e0:~JsonObject.encodePrettily()" resolve="encodePrettily" />
                                     </node>
                                   </node>
                                   <node concept="Xl_RD" id="3iJaUC7mwE_" role="3uHU7B">
@@ -927,7 +927,7 @@
               <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
             </node>
             <node concept="liA8E" id="1PUq9fjdQqz" role="2OqNvi">
-              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String)" resolve="println" />
               <node concept="3cpWs3" id="1PUq9fjdQxI" role="37wK5m">
                 <node concept="3cpWs3" id="1PUq9fjdQSr" role="3uHU7B">
                   <node concept="Xl_RD" id="1PUq9fjdQUW" role="3uHU7w">
@@ -938,7 +938,7 @@
                       <ref role="3VsUkX" node="1PUq9fjdOF$" resolve="DemiKeyer" />
                     </node>
                     <node concept="liA8E" id="1PUq9fjdQK3" role="2OqNvi">
-                      <ref role="37wK5l" to="wyt6:~Class.getName():java.lang.String" resolve="getName" />
+                      <ref role="37wK5l" to="wyt6:~Class.getName()" resolve="getName" />
                     </node>
                   </node>
                 </node>
