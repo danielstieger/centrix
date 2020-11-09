@@ -2,7 +2,7 @@
 <model ref="r:c6cf81b0-283a-4565-9487-03b39e03faee(org.modellwerkstatt.centrix.globallog)">
   <persistence version="9" />
   <languages>
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="6" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="8" />
   </languages>
   <imports>
     <import index="sv4e" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:io.vertx.core(org.modellwerkstatt.centrix/)" />
@@ -44,9 +44,6 @@
       </concept>
       <concept id="1188208481402" name="jetbrains.mps.baseLanguage.structure.HasAnnotation" flags="ng" index="2AJDlI">
         <child id="1188208488637" name="annotation" index="2AJF6D" />
-      </concept>
-      <concept id="1224848483129" name="jetbrains.mps.baseLanguage.structure.IBLDeprecatable" flags="ng" index="IEa8$">
-        <property id="1224848525476" name="isDeprecated" index="IEkAT" />
       </concept>
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
         <child id="1154032183016" name="body" index="2LFqv$" />
@@ -219,7 +216,6 @@
     <property role="TrG5h" value="GlobalLogger" />
     <node concept="Wx3nA" id="2T5SnS24sOh" role="jymVt">
       <property role="TrG5h" value="DATETIMEFORMATTER" />
-      <property role="IEkAT" value="false" />
       <node concept="3Tm1VV" id="2T5SnS24sOi" role="1B3o_S" />
       <node concept="3uibUv" id="1YUU7GVVr1Q" role="1tU5fm">
         <ref role="3uigEE" to="x5li:~DateTimeFormatter" resolve="DateTimeFormatter" />
