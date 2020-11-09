@@ -2,7 +2,7 @@
 <model ref="r:c6cf81b0-283a-4565-9487-03b39e03faee(org.modellwerkstatt.centrix.globallog)">
   <persistence version="9" />
   <languages>
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
   </languages>
   <imports>
     <import index="sv4e" ref="7cf0f58f-f5ab-4a12-b52b-271f2d40656c/java:io.vertx.core(org.modellwerkstatt.centrix/)" />
