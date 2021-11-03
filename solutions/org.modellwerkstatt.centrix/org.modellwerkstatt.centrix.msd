@@ -18,6 +18,14 @@
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
   </facets>
+  <stubModelEntries>
+    <stubModelEntry path="${APPHome}/centrix/jars/joda-time-2.10.jar" />
+    <stubModelEntry path="${APPHome}/centrix/jars/log4j.jar" />
+    <stubModelEntry path="${APPHome}/centrix/jars/vertx-bridge-common-3.5.3.jar" />
+    <stubModelEntry path="${APPHome}/centrix/jars/vertx-core-3.5.3.jar" />
+    <stubModelEntry path="${APPHome}/centrix/jars/vertx-tcp-eventbus-bridge-3.6.0.jar" />
+    <stubModelEntry path="${APPHome}/centrix/jars/vertx-web-3.5.3.jar" />
+  </stubModelEntries>
   <sourcePath />
   <dependencies>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
