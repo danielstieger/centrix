@@ -5,14 +5,13 @@
             
  daniel stieger, autumn 2018, marseille
 
- 
+                 autumn 2021, koblach
  
  
  set JAVA_HOME=c:\javaexe\MPS30\jre
  set PATH=%PATH%;c:\javaexe\ant_MPS25\bin;c:\PROGRA~2\WIXTOO~1.7\bin
  
- 
- export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
+ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jbr11/Contents/Home
  export PATH=$PATH:/Users/danielstieger/javaexe/ant/bin
  
 -->
@@ -20,7 +19,7 @@
 <project name="build-centrix" default="default">      
   <description> Create fat jar for vertx centrix global log server </description>
   
-  <property name="vertx.dir"        value="/Users/danielstieger/stuff/vertx/lib" />
+  <property name="vertx.dir"        value="vertx/lib" />
   
   <property name="bin.dir"        value="solutions/org.modellwerkstatt.centrix/classes_gen" /> 
   <property name="lib.dir"        value="jars" />
@@ -28,7 +27,7 @@
   
   <!-- **** app specific definitions **************************************************************** -->
   <property name="projectName"          value="centrix" />
-  <property name="projectVersion"       value="1.2.0" />
+  <property name="projectVersion"       value="1.3.0" />
 
   <!-- <property name="projectMainClass"     value="org.modellwerkstatt.centrix.globallog.GlobalLogger" /> -->
   <property name="projectMainClass"     value="org.modellwerkstatt.centrix.globallog.GlobalLogger" />
